@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mapbox Germany Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Your access token
+        mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+
+        // Initialize the map centered on Germany
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/light-v10', // style URL, you can customize this in Mapbox Studio
+            center: [10.4515, 51.1657], // Germany's center coordinates [lng, lat]
+            zoom: 5, // initial zoom
+            maxBounds: [
+                [5.8663, 47.2701], // Southwest coordinates of Germany
+                [15.0419, 55.0992]  // Northeast coordinates of Germany
+            ] // restrict the map to the bounds of Germany
+        });
+
+        // Add zoom and rotation controls to the map
+        map.addControl(new mapboxgl.NavigationControl());
+
+        // Example of adding a marker for Berlin
+        var berlinMarker = new mapboxgl.Marker()
+            .setLngLat([13.4050, 52.5200])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }).setText('Berlin'))
+            .addTo(map);
+
+        // Add additional markers for other important cities
+        var munichMarker = new mapboxgl.Marker()
+            .setLngLat([11.5820, 48.1351])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }).setText('Munich'))
+            .addTo(map);
+
+        var hamburgMarker = new mapboxgl.Marker()
+            .setLngLat([9.9937, 53.5511])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }).setText('Hamburg'))
+            .addTo(map);
+        
+        // Add GeoJSON data for the Bundesländer boundaries
+        map.on('load', function () {
+            map.addSource('bundeslaender', {
+                'type': 'geojson',
+                'data': 'URL_TO_YOUR_GEOJSON_FILE_FOR_BUNDESLAENDER'
+            });
+
+            map.addLayer({
+                'id': 'bundeslaender-layer',
+                'type': 'line',
+                'source': 'bundeslaender',
+                'layout': {},
+                'paint': {
+                    'line-color': '#888',
+                    'line-width': 2
+                }
+            });
+        });
+
+        // Adjust detail based on zoom level
+        map.on('zoom', function () {
+            var zoomLevel = map.getZoom();
+            if (zoomLevel < 6) {
+                map.setLayoutProperty('bundeslaender-layer', 'visibility', 'none');
+            } else {
+                map.setLayoutProperty('bundeslaender-layer', 'visibility', 'visible');
+            }
+        });
+    </script>
+</body>
+</html>
