@@ -15,17 +15,17 @@
     <div id="map"></div>
     <script>
         // Your access token
-        mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaHplbWxpbiIsImEiOiJjbHltd2QycnUwazBqMnBzNnhxY2RwbXFsIn0.5Tx0GKmOQspjUE3rkUQezQ';
 
         // Initialize the map centered on Germany
         var map = new mapboxgl.Map({
             container: 'map', // container id
             style: 'mapbox://styles/mapbox/light-v10', // style URL, you can customize this in Mapbox Studio
             center: [10.4515, 51.1657], // Germany's center coordinates [lng, lat]
-            zoom: 5, // initial zoom
+            zoom: 2, // initial zoom
             maxBounds: [
-                [5.8663, 47.2701], // Southwest coordinates of Germany
-                [15.0419, 55.0992]  // Northeast coordinates of Germany
+                [4.8663, 46.2701], // Southwest coordinates of Germany
+                [16.0419, 56.0992]  // Northeast coordinates of Germany
             ] // restrict the map to the bounds of Germany
         });
 
@@ -49,25 +49,7 @@
             .setPopup(new mapboxgl.Popup({ offset: 25 }).setText('Hamburg'))
             .addTo(map);
         
-        // Add GeoJSON data for the Bundesländer boundaries
-        map.on('load', function () {
-            map.addSource('bundeslaender', {
-                'type': 'geojson',
-                'data': 'URL_TO_YOUR_GEOJSON_FILE_FOR_BUNDESLAENDER'
-            });
-
-            map.addLayer({
-                'id': 'bundeslaender-layer',
-                'type': 'line',
-                'source': 'bundeslaender',
-                'layout': {},
-                'paint': {
-                    'line-color': '#888',
-                    'line-width': 2
-                }
-            });
-        });
-
+       
         // Adjust detail based on zoom level
         map.on('zoom', function () {
             var zoomLevel = map.getZoom();
