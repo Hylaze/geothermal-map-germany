@@ -1,0 +1,23 @@
+#map {
+    height: 600px; /* Höhe der Karte */
+    width: 100%; /* Breite der Karte */
+}
+
+.custom-marker-icon {
+    background-color: #f00; /* Default color (red) */
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: relative;
+}
+
+.controls {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
