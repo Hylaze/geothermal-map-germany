@@ -1,0 +1,976 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+  <meta name="description" content="Interaktive Grafik PFA ABS 46/2">
+ 
+  <meta name="author" content="SG">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+<title>Sanierung Riedbahn</title>
+    
+  
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<style type="text/css">
+
+
+
+body {
+margin:0;
+padding:0;
+}
+    
+
+ul {
+  list-style-image: url('img/bullet_1.svg');
+    margin-top: -1px;
+    padding-left: 13px;
+    margin-bottom: 0.8em;
+}
+
+p {
+    margin-top: 0.2em;
+    margin-bottom: -1px;
+}
+    
+h1 { font-size: 15px; 
+    font-family: "DBSansCondBold", Georgia;
+    margin-bottom: 0.3em;
+    margin-top: 1px;
+}
+    
+@font-face {
+    font-family: 'DBSansRegular';
+    
+    src: 
+         url('./font/DBSans-Regular.woff') format('woff'); /* Modern Browsers */
+         
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;}
+
+@font-face {
+    font-family: 'DBSansBold';
+    
+    src: url('./font/DBSans-Bold.woff') format('woff'); /* Modern Browsers */
+         
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+    
+@font-face {
+    font-family: 'DBSansCondBold';
+    
+    src: url('./font/DBSansCond-Bold.woff') format('woff'); /* Modern Browsers */
+         
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+    
+@font-face {
+    font-family: 'DBSansCondRegular';
+    
+    src: url('./font/DBSansCond-Regular.woff') format('woff'); /* Modern Browsers */
+         
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+html {
+overflow:hidden;
+}
+    
+
+* {
+  box-sizing: border-box;
+}
+.clickable {height: 100%; width: 100%; left: 0; top: 0; position: absolute; z-index: 1;}
+#aspectratio {position: relative; margin:auto;}
+#container {position: absolute; top: 0%; left: 0%; bottom:0%; right:0%;}
+#kopf {position: absolute; width: 100%; height: 7%; background-color: #FFFFFF;}
+#titel {position:absolute; top: 37%; left: 2.3%; width: 54%; height: 30%;}
+#content {position:relative; width: 100%; height: 100%; overflow: hidden;}
+.map {position:absolute; top:0%; left:0%; width: 100%; height: 100%;}
+.map_h, .map_h2 {position:absolute; top:0%; left:0%; width: 100%; height: 100%; display: none}
+.popup {position:absolute; display: none}
+.popup_C {position:absolute; top:0%; left:0%; width: 100%; height: 100%;}
+#cont_menue {position:absolute; top: 9%; right: 20px; width: 250px; height: 400px;}
+#cont_m_kopf {position:absolute; top: 9%; right: 20px; width: 250px; height: 84px;}
+#m_kopf {position:absolute; top: 0; left: 0; width: 100%; height: 40px;}
+#menue {position: absolute; left: 0; top: 0; width: 100%; height:300px;}
+#reset {position:absolute; left: 0; top:348px; width: 100%; height: 40px; cursor: pointer}
+#reset_2 {position:absolute; left: 0; top: 44px; width: 100%; height: 40px; cursor: pointer}
+#menue_mini {position:absolute; top:9%; right: 0.8%; width: 3.125%; height: 5.55%; cursor: pointer}
+
+.sf_ne, .sf_e, .sf_se, .sf_sw, .sf_w, .sf_nw, .sf_n, .sf_s {position:absolute; cursor: pointer; background: url(img/t01.png);}
+.sfx {position:absolute; cursor: pointer; background: url(img/t01.png)}
+.sf_A {position:absolute; top:0%; left:0%; width: 100%; height: 100%; cursor: pointer}
+.sf_B {position:absolute; top:0%; left:0%; width: 100%; height: 100%; display: none; cursor: pointer}
+.sf_IA {position:absolute; cursor: pointer}
+.sf_IB {position:absolute; display: none; cursor: pointer;}
+.sf_m {position:absolute; background: url(img/t01.png); cursor:pointer;}
+.info {position:absolute; display:none; z-index: 15;}
+.sf_X {position:absolute;}
+.schalter {position:absolute; background: url(img/t01.png); cursor:pointer;}
+.schalter_b {position:absolute; background: url(img/t01.png); cursor:pointer;}
+#infotext {position:absolute; top:0px; right: 2.2%; width: 32%; height: 56.035%; z-index: 3; display:none;}
+#schliesser {position:absolute; bottom:0px; right: 0px; width: 25%; height: 15%; background: url(img/t01.png); cursor:pointer;}
+#footer {position: absolute; bottom: 0%; left: 0%; width: 100%; height: 13.93%;}
+#ZL {position: absolute; bottom: 0%; left: 0%; width: 100%; height: 23.619%; z-index: 10; display: none}
+#info {position:absolute; top: 25%; right: 4%; width: 3.5%; height: auto; cursor:pointer;}
+#KM {pointer-events: none}
+#map {position: absolute; top: 0; bottom: 0; width: 100%;}
+    
+	
+#wrapper {
+    position: relative; 
+    max-width: 1400px; 
+    width: 100%; 
+    max-height: 950px; 
+    height: 100vh; 
+    margin:auto; 
+    overflow: hidden
+}
+
+.container_map {
+position:absolute;
+top: 7%;
+left: 0%;
+width: 100%;
+height: 92%;
+}
+
+#Tip1 {
+position: absolute;
+
+display: none;
+width: 255px;
+height: 108px;
+}
+	
+#Tip2 {
+position: absolute;
+
+display: none;
+width: 255px;
+height: 47px;
+}
+    
+.maplibregl-ctrl-top-left {
+  z-index: 700
+}
+	
+.mapboxgl-ctrl-compass {
+display: none !important;
+}
+	
+	
+.mapboxgl-popup-content {
+width: auto;
+box-shadow: 0.3em 0.3em 0.5em 0 rgba(0, 0, 0, 0.4), 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.25);
+border-radius: 0.5em;
+overflow: hidden;
+		}
+	
+.mapboxgl-popup {
+z-index: 700;
+
+    }      
+      
+.marker svg {
+  width: 100%;
+  height: 100%;
+}
+
+.marker2 svg {
+  width: 100%;
+  height: 100%;
+}
+    
+.marker3{
+  display: none;
+}
+	
+
+    
+.marker3 svg {
+  width: 100%;
+  height: 100%;
+} 
+	
+#frame1 {
+width: 384px;
+height: 268px;
+margin: -15px -10px;
+border: none
+		}
+	
+#frame2 {
+width: 384px;
+height: 328px;
+margin: -15px -10px;
+border: none
+		}
+	
+#frame3 {
+width: 384px;
+height: 215px;
+margin: -15px -10px;
+border: none
+		}
+	
+#frame4 {
+width: 384px;
+height: 365px;
+margin: -15px -10px;
+border: none
+		}
+	
+#frame5 {
+width: 384px;
+height: 227.8px;
+margin: -15px -10px;
+border: none
+		}
+	
+#frame5 {
+width: 340px;
+height: 220px;
+margin: -15px -10px;
+border: none
+		}
+
+#my-marker {
+  cursor: pointer;
+ background-color: blueviolet;
+background-image: url("./js/pin_gr.png");
+background-size: contain;
+}
+	
+#my-marker1 {
+  cursor: pointer;
+}
+	
+#btn_close {
+    position: absolute; 
+    right: 0%; 
+    top: 0%; 
+    width: 6%; 
+    height: 12.5;
+    cursor: pointer
+}
+	
+#Container_Pic {
+position: absolute;
+width: 70%;
+padding-top: 45%;
+left: 15%;
+top: 20%;
+border-radius: 5px;
+display: none;
+z-index: 1000;
+overflow: hidden;
+box-shadow: 0.3em 0.3em 0.5em 0 rgba(0, 0, 0, 0.4), 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.25);
+} 
+</style>
+</head>
+
+<body>
+<div id="aspectratio">
+
+<div id="content">
+<div id="karte" class="container_map">
+  <div id="map"></div>
+    
+
+<p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+
+
+</div>
+
+<div id="kopf" ><img src="img/HL.svg" style="width: 100%; height: 100;"></div>
+
+<div id="cont_m_kopf">
+<div id="m_kopf"><img src="img/menue_head.svg" style="width: 100%; height: 100;"></div>
+<div id="reset_2"><img src="img/reset.svg" style="width: 100%; height: 100;"></div>
+</div>
+
+<div id="cont_menue">
+<div id="menue_main"><img src="img/menue.svg" style="width: 100%; height: 100;">
+<div id="menue" class="full"><img src="img/menue.svg" style="width: 100%; height: 100;">
+<div id="m_close" class="sf_m" style="position: absolute; left: 0; top: 0; width: 100%; height: 40px; cursor: pointer;"></div>
+<div id="sf_stat_a" style="position: absolute; left: 0; top: 46.79px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_stat_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_stat_b" class="sf_an" style="position: absolute; left: 0; top: 46.79px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_stat_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_bue_a" style="position: absolute; left: 0; top: 69.68px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_bue_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_bue_b" class="sf_an" style="position: absolute; left: 0; top: 69.68px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_bue_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_ssw_a" style="position: absolute; left: 0; top: 92.58px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_ssw_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_ssw_b" class="sf_an" style="position: absolute; left: 0; top: 92.58px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_ssw_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_we_a" style="position: absolute; left: 0; top: 115.47px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_we_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_we_b" class="sf_an" style="position: absolute; left: 0; top: 115.47px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_we_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_gl_a" style="position: absolute; left: 0; top: 138.37px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_ol_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_gl_b" class="sf_an" style="position: absolute; left: 0; top: 138.37px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_ol_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_sig_a" style="position: absolute; left: 0; top: 161.26px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_sig_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_sig_b" class="sf_an" style="position: absolute; left: 0; top: 161.26px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_sig_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_stw_a" style="position: absolute; left: 0; top: 184.16px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_stw_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_stw_b" class="sf_an" style="position: absolute; left: 0; top: 184.16px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_stw_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_we2_a" style="position: absolute; left: 0; top: 248.85px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_we2_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_we2_b" class="sf_an" style="position: absolute; left: 0; top: 248.85px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_we2_b.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_gl2_a" style="position: absolute; left: 0; top: 271.57px; width: 100%; height: 22px; cursor: pointer;"><img src="img/m_gl_a.svg" style="width: 100%; height: 100;"></div>
+<div id="sf_gl2_b" class="sf_an" style="position: absolute; left: 0; top: 271.57px; width: 100%; height: 22px; cursor: pointer; display: none"><img src="img/m_gl_b.svg" style="width: 100%; height: 100;"></div>
+</div>
+ <div id="All" style="position: absolute; left: 0; top: 304px; width: 100%; height: 40px;">
+	
+	 <div id="all_b" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer;"><img src="img/all_b.svg" style="width: 100%; height: 100;"></div>
+     <div id="all_a" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer;"><img src="img/all_a.svg" style="width: 100%; height: 100%;"></div>
+     <div id="all_c" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer;"><img src="img/all_c.svg" style="width: 100%; height: 100%;">
+        <div id="all_c1" style="position: absolute; left: 0px; top: 0px; width: 50%; height: 100%; background: url(img/t01.png)"></div>
+        <div id="all_c2" style="position: absolute; right: 0px; top: 0px; width: 50%; height: 100%; background: url(img/t01.png)"></div>
+    </div>
+</div>	
+</div>
+	<div id="reset"><img src="img/reset.svg" style="width: 100%; height: 100;"></div>
+</div>
+
+
+
+<div id="Container_Pic">
+    <div id="Bild_2" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"><img id="change-image_1" src="img/t01.png" style="width: 100%; height: 100%;"/>
+    </div>
+    
+    <div id="btn_close"><img src="img/btn_close.svg" style="width: 100%; height: 100%;"></div>
+    </div>
+    
+</div>
+</div>
+
+    
+<script>
+    
+center = [8.489809886051754, 49.76809198696891];
+zoomLevelOnStart = 9.3;
+    
+geoReferenceWidthInMeters = 375550;
+geoReferenceHeightInMeters = 375550;
+   
+imageURL1 ="img/SuRa.svg";
+imageURL3 ="img/Kreise_UV.svg";
+
+
+    
+    var map = new maplibregl.Map({
+      container: 'map',
+      style: 'style.json',
+      center: center,
+      zoom: zoomLevelOnStart,
+      maxZoom: 16,
+      minZoom: 7,
+      attributionControl: false,
+});
+    
+map.addControl(new maplibregl.AttributionControl(), 'bottom-left');
+
+      
+map.on("load", function () {
+ 
+map.addSource('OLEN', {
+type: 'geojson',
+data: './js/RB_OLEN.geojson',
+
+});
+	
+map.addLayer({
+'id': 'OLEN',
+'type': 'line',
+'source': 'OLEN',
+layout: {visibility: 'none',},
+"paint": {
+    "line-color": "#FF9B00",
+    "line-width": {
+      "stops": [[7, 1.8], [10, 2.8], [13, 8]]
+    }},
+"minzoom": 8,
+}, 'highway-name-path'
+);
+ 
+map.addSource('RB_SSW2', {
+type: 'geojson',
+data: './js/RB_SSW.geojson',
+
+});
+	
+map.addLayer({
+'id': 'RB_SSW2',
+'type': 'line',
+'source': 'RB_SSW2',
+layout: {visibility: 'none',},
+"paint": {
+    "line-color": "#009FE3",
+    "line-width": {
+      "stops": [[6, 1.5], [13, 3]]
+    }},
+"minzoom": 8,
+
+}, 'airport-label-major-de'
+);
+	
+map.addSource('weichen', {
+type: 'geojson',
+data: './js/rb_weichen_1.geojson',
+
+});
+	
+map.addLayer({
+'id': 'Weichen',
+'type': 'circle',
+'source': 'weichen',
+layout: {visibility: 'none',},
+"paint": {
+    "circle-color": "#1455C0",
+	"circle-stroke-color": "#FFF",
+	"circle-stroke-width": 1.2,
+    "circle-radius": {
+      "stops": [[7, 1], [10, 1.5], [12, 5]]
+    }},
+"minzoom": 8,
+
+});
+	
+map.addSource('weichen_2', {
+type: 'geojson',
+data: './js/RB_weichen_v24.geojson',
+
+});
+	
+map.addLayer({
+'id': 'Weichen_2',
+'type': 'circle',
+'source': 'weichen_2',
+layout: {visibility: 'none',},
+"paint": {
+    "circle-color": "#84DAFF",
+	"circle-stroke-color": "#FFF",
+	"circle-stroke-width": 1.2,
+    "circle-radius": {
+      "stops": [[7, 1], [10, 1.5], [12, 5]]
+    }},
+"minzoom": 8,
+
+});
+	
+map.addSource('BUE', {
+type: 'geojson',
+data: './js/RB_BUE.geojson',
+
+});
+	
+map.addLayer({
+'id': 'BUE',
+'type': 'circle',
+'source': 'BUE',
+layout: {visibility: 'none',},
+"paint": {
+    "circle-color": "#FFD800",
+	"circle-stroke-color": "#FFF",
+	"circle-stroke-width": 1.5,
+    "circle-radius": {
+      "stops": [[7, 1.5], [10, 3], [12, 7]]
+    }},
+"minzoom": 8,
+
+});
+	
+map.loadImage(
+'./js/icon_1.png',
+function (error, image) {
+if (error) throw error;
+map.addImage('Signal', image);
+map.addSource('SIG', {
+type: 'geojson',
+data: './js/RB_SIG.geojson',
+});
+    
+map.addLayer({
+'id': 'SIG',
+'type': 'symbol',
+'source': 'SIG',
+"minzoom": 9,
+'layout': {
+'visibility': 'none',
+'icon-allow-overlap': true,
+'icon-ignore-placement': true,
+'icon-image': 'Signal',
+'icon-anchor': 'center',
+'icon-size': [
+                  'interpolate',
+                  ['linear'],
+                  ['zoom'],
+                  7, 0.05,
+                  10, 0.08,
+                  12, 0.2
+            ]
+
+}
+});
+});
+	
+	
+map.loadImage(
+'./js/pin_gr.png',
+function (error, image) {
+if (error) throw error;
+map.addImage('pingruen', image);
+map.addSource('ESTW', {
+type: 'geojson',
+data: './js/RB_ESTW.geojson',
+});
+    
+map.addLayer({
+'id': 'ESTW',
+'type': 'symbol',
+'source': 'ESTW',
+"minzoom": 9,
+'layout': {
+'visibility': 'none',
+'icon-allow-overlap': true,
+'icon-ignore-placement': true,
+'icon-image': 'pingruen',
+'icon-anchor': 'bottom',
+'icon-size': [
+                  'interpolate',
+                  ['linear'],
+                  ['zoom'],
+                  9, 0.15,
+                  10, 0.2,
+                  11, 0.25
+            ]
+
+}
+});
+});
+	
+map.loadImage(
+'./js/pin_rot.png',
+function (error, image) {
+if (error) throw error;
+map.addImage('pinrot', image);
+map.addSource('stationen', {
+type: 'geojson',
+data: './js/Riedbahn_Bf_N.geojson',
+});
+    
+map.addLayer({
+'id': 'points',
+"interactive": true,
+'type': 'symbol',
+'source': 'stationen',
+"minzoom": 9,
+'layout': {
+'icon-allow-overlap': true,
+'icon-ignore-placement': true,
+'icon-image': 'pinrot',
+'icon-anchor': 'bottom',
+'icon-size': [
+                  'interpolate',
+                  ['linear'],
+                  ['zoom'],
+                  9, 0.15,
+                  10, 0.2,
+                  11, 0.25
+            ],
+}
+});
+});	
+ 
+map.resize();
+    
+}
+);
+	
+/*
+this.marker = new maplibregl.Marker(
+	{
+src: './js/pin_rot.png',
+}
+)
+.setLngLat([8.618183028590225, 50.02435323129574])
+.addTo(map);
+	
+
+this.marker._element.id = "my-marker";
+this.marker._element.classList.add("mystyle");
+	
+	
+	
+this.marker1 = new maplibregl.Marker()
+.setLngLat([8.5, 50.1])
+.addTo(map);
+	
+this.marker1._element.id = "my-marker1";
+this.marker1._element.classList.add("mystyle");
+*/
+
+
+var markerHeight = 30, markerRadius = 10, linearOffset = 0;
+
+var popupOffsets = {
+'top': [0, 0],
+'top-left': [0,0],
+'top-right': [0,0],
+'bottom': [0, -markerHeight],
+'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+'left': [markerRadius, (markerHeight - markerRadius) * -1],
+'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+};
+
+var popupOffsets_P = {
+'top': [100],
+'top-left': [100,50],
+'top-right': [0,100],
+'bottom': [-100],
+};
+	
+var popup_BUE = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: true,
+offset: 12,
+className: 'popbue',
+})
+.setMaxWidth("450px")
+;
+ 
+map.on('mouseenter', 'BUE', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+popup.remove(); 
+popup_BUE.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+	
+
+	
+
+var popup = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: true,
+offset: popupOffsets,
+className: 'dubidu',
+})
+.setMaxWidth("450px")
+;
+ 
+map.on('mouseenter', 'points', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+popup_BUE.remove(); 
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});	
+	
+	
+var popup_W = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false,
+offset: 8
+});
+ 
+map.on('mouseenter', 'Weichen', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+popup_W.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'Weichen', function () {
+map.getCanvas().style.cursor = '';
+popup_W.remove();
+});
+	
+var popup_W2 = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false,
+offset: 8
+});
+ 
+map.on('mouseenter', 'Weichen_2', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.title;
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+popup_W2.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'Weichen_2', function () {
+map.getCanvas().style.cursor = '';
+popup_W2.remove();
+});
+	
+
+	
+var popup_ESTW = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false,
+offset: popupOffsets,
+});
+ 
+map.on('mouseenter', 'ESTW', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.name;
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+popup_ESTW.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'ESTW', function () {
+map.getCanvas().style.cursor = '';
+popup_ESTW.remove();
+});
+	
+
+	
+var popup_SSW = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false,
+offset: 0,
+});
+ 
+map.on('mouseenter', 'RB_SSW2', function (e) {
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.lngLat;
+var description = e.features[0].properties.title;
+ 
+ 
+popup_SSW.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'RB_SSW2', function () {
+map.getCanvas().style.cursor = '';
+popup_SSW.remove();
+});
+
+
+    
+map.dragRotate.disable();
+ 
+map.touchZoomRotate.disableRotation();
+
+var nav = new maplibregl.NavigationControl();
+map.addControl(nav, 'top-left');
+	
+document.getElementById('reset').addEventListener('click', function () {
+
+map.flyTo({
+center: center,
+zoom: zoomLevelOnStart,
+bearing: 0,
+essential: true 
+});
+});
+	
+document.getElementById('reset_2').addEventListener('click', function () {
+
+map.flyTo({
+center: center,
+zoom: zoomLevelOnStart,
+bearing: 0,
+essential: true 
+});
+});
+	
+
+	
+function we_H() {
+  map.setLayoutProperty('Weichen','visibility','none');
+}
+    
+function we_S() {
+  map.setLayoutProperty('Weichen','visibility','visible');
+}
+	
+function stat_H() {
+  map.setLayoutProperty('points','visibility','none');
+}
+    
+function stat_S() {
+  map.setLayoutProperty('points','visibility','visible');
+}
+	
+function olen_H() {
+  map.setLayoutProperty('OLEN','visibility','none');
+}
+    
+function olen_S() {
+  map.setLayoutProperty('OLEN','visibility','visible');
+}
+	
+function bue_H() {
+  map.setLayoutProperty('BUE','visibility','none');
+}
+    
+function bue_S() {
+  map.setLayoutProperty('BUE','visibility','visible');
+}
+	
+function sig_H() {
+  map.setLayoutProperty('SIG','visibility','none');
+}
+    
+function sig_S() {
+  map.setLayoutProperty('SIG','visibility','visible');
+}
+	
+function estw_H() {
+  map.setLayoutProperty('ESTW','visibility','none');
+}
+    
+function estw_S() {
+  map.setLayoutProperty('ESTW','visibility','visible');
+}
+
+function ssw_H() {
+  map.setLayoutProperty('RB_SSW2','visibility','none');
+}
+    
+function ssw_S() {
+  map.setLayoutProperty('RB_SSW2','visibility','visible');
+}
+	
+function we2_H() {
+  map.setLayoutProperty('Weichen_2','visibility','none');
+}
+    
+function we2_S() {
+  map.setLayoutProperty('Weichen_2','visibility','visible');
+}
+	
+function gl_H() {
+  map.setLayoutProperty('RB_Gleise','visibility','none');
+}
+    
+function gl_S() {
+  map.setLayoutProperty('RB_Gleise','visibility','visible');
+}
+</script>
+    
+<script type="text/javascript">
+
+jQuery(document).ready(function() { jQuery(window).resize(); });
+jQuery(window).resize(function() {
+var divheight = $(window).height();
+var divwidth = (divheight / 9) * 12;
+ 
+var maxwidth = $('body').width();
+if ( divwidth > maxwidth ) {
+var wrapperwidth = maxwidth;
+} else {
+var wrapperwidth = divwidth;
+}
+ 
+var maxheight = (wrapperwidth / 12) * 9;
+if ( divheight > maxheight ) {
+var wrapperheight = maxheight;
+} else {
+var wrapperheight = divheight;
+}
+ 
+$("#aspectratio").css('width', wrapperwidth);
+$("#aspectratio").css('height', wrapperheight);
+});
+
+</script>
+
+<script type="text/javascript">
+	
+$("#m_close").click(function(){$("#cont_menue").fadeOut();$("#reset").animate({top: '54px'});});
+$("#m_kopf").click(function(){$("#cont_menue").fadeIn();$("#reset").animate({top: '348px'});});
+	
+$("#btn_close").click(function(){$("#Container_Pic").hide();});
+
+$(document).ready(function(){
+$("#my-marker").click(function(){$(".mystyle").fadeOut();});	
+    
+$("#close").click(function(){$("#menue, .info, .sf_IB").fadeOut();});
+$("#menue_mini").click(function(){$("#menue").fadeIn();});
+
+    
+$("#KS_01").click(function(){$("#KS_02").fadeIn();Sat_S();});
+$("#KS_02").click(function(){$("#KS_02").fadeOut();Sat_H();});
+    
+$("#sf_we_a").click(function(){$("#sf_we_b, #all_c").fadeIn();we_S();});
+$("#sf_we_b").click(function(){$("#sf_we_b").fadeOut();$("#all_c").fadeIn();we_H();});
+	
+$("#sf_gl_a").click(function(){$("#sf_gl_b, #all_c").fadeIn();olen_S();});
+$("#sf_gl_b").click(function(){$("#sf_gl_b").fadeOut();$("#all_c").fadeIn();olen_H();});
+    
+$("#sf_stat_a").click(function(){$("#sf_stat_b, #all_c").fadeIn();stat_S();});
+$("#sf_stat_b").click(function(){$("#sf_stat_b").fadeOut();$("#all_c").fadeIn();stat_H();});
+	
+$("#sf_bue_a").click(function(){$("#sf_bue_b, #all_c").fadeIn();bue_S();});
+$("#sf_bue_b").click(function(){$("#sf_bue_b").fadeOut();$("#all_c").fadeIn();bue_H();});
+	
+$("#sf_sig_a").click(function(){$("#sf_sig_b, #all_c").fadeIn();sig_S();});
+$("#sf_sig_b").click(function(){$("#sf_sig_b").fadeOut();$("#all_c").fadeIn();sig_H();});
+    
+$("#sf_stw_a").click(function(){$("#sf_stw_b, #all_c").fadeIn();estw_S();});
+$("#sf_stw_b").click(function(){$("#sf_stw_b").fadeOut();$("#all_c").fadeIn();estw_H();});
+    
+$("#sf_ssw_a").click(function(){$("#sf_ssw_b, #all_c").fadeIn();ssw_S();});
+$("#sf_ssw_b").click(function(){$("#sf_ssw_b").fadeOut();$("#all_c").fadeIn();ssw_H();});
+	
+$("#sf_we2_a").click(function(){$("#sf_we2_b, #all_c").fadeIn();we2_S();});
+$("#sf_we2_b").click(function(){$("#sf_we2_b").fadeOut();$("#all_c").fadeIn();we2_H();});
+    
+$("#sf_gl2_a").click(function(){$("#sf_gl2_b, #all_c").fadeIn();gl_S();});
+$("#sf_gl2_b").click(function(){$("#sf_gl2_b").fadeOut();$("#all_c").fadeIn();gl_H();});
+	
+$("#all_a").click(function(){$(".sf_an, #all_a").fadeOut();$("#all_b").fadeIn();gl_H();we2_H();ssw_H();estw_H();sig_H();bue_H();stat_H();olen_H();we_H();});
+$("#all_b").click(function(){$(".sf_an, #all_a").fadeIn();gl_S();we2_S();ssw_S();estw_S();sig_S();bue_S();stat_S();olen_S();we_S();});
+    
+$("#all_c1").click(function(){$("#all_c, #all_b").fadeOut();$(".sf_an, #all_a").fadeIn();gl_S();we2_S();ssw_S();estw_S();sig_S();bue_S();stat_S();olen_S();we_S();});
+$("#all_c2").click(function(){$("#all_c, .sf_an").fadeOut();gl_H();we2_H();ssw_H();estw_H();sig_H();bue_H();stat_H();olen_H();we_H();});
+    
+});
+    
+
+</script>
+</body>
+</html>
