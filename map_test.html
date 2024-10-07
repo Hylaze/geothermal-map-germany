@@ -69,82 +69,30 @@
       }
   
       /* Change font weight for checked labels */
-    .filter-group input[type='checkbox']:checked + label {
-        font-weight: bold; /* Bold font for checked labels */
-    }
+      .filter-group input[type='checkbox']:checked + label {
+          font-weight: bold; /* Bold font for checked labels */
+      }
 
-    /* Keep normal font weight for unchecked labels */
-    .filter-group label {
-        display: flex; /* Use flexbox for alignment */
-        align-items: center; /* Center items vertically */
-        cursor: pointer;
-        padding: 10px;
-        transition: background-color 0.3s; /* Smooth background color transition */
-    }
-  
+      /* Keep normal font weight for unchecked labels */
+      .filter-group label {
+          display: flex; /* Use flexbox for alignment */
+          align-items: center; /* Center items vertically */
+          cursor: pointer;
+          padding: 10px;
+          transition: background-color 0.3s; /* Smooth background color transition */
+      }
   
       .maplibregl-popup {
           max-width: 400px;
           font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
       }
   </style>
-  
 </head>
 <body>
 <div id="map"></div>
 <nav id="filter-group" class="filter-group"></nav>
 
 <script>
-    const places = {
-        'type': 'FeatureCollection',
-        'features': [
-            {
-                'type': 'Feature',
-                'properties': {
-                    'icon': 'theatre',
-                    'description': '<strong>Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
-                },
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-77.038659, 38.931567]
-                }
-            },
-            {
-                'type': 'Feature',
-                'properties': {
-                    'icon': 'bar',
-                    'description': '<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar is throwing a <a href="http://tallulaeatbar.ticketleap.com/2012beachblanket/" target="_blank" title="Opens in a new window">Big Backyard Beach Bash</a> on Saturday.</p>'
-                },
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-77.090372, 38.881189]
-                }
-            },
-            {
-                'type': 'Feature',
-                'properties': {
-                    'icon': 'bicycle',
-                    'description': '<strong>Seersucker Bike Ride and Social</strong><p>Get fancy, grab your bike, and take part in this year\'s <a href="http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/" target="_blank" title="Opens in a new window">Seersucker Social</a> bike ride.</p>'
-                },
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-77.052477, 38.943951]
-                }
-            },
-            {
-                'type': 'Feature',
-                'properties': {
-                    'icon': 'music',
-                    'description': '<strong>Capital Pride Parade</strong><p>The annual <a href="https://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. Free.</p>'
-                },
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-77.031706, 38.914581]
-                }
-            }
-        ]
-    };
-
     const filterGroup = document.getElementById('filter-group');
     const map = new maplibregl.Map({
         container: 'map',
@@ -153,99 +101,109 @@
         zoom: 11.15
     });
 
-    map.on('load', () => {
-        map.addSource('places', {
-            'type': 'geojson',
-            'data': places
-        });
+    // Function to load GeoJSON from external file
+    const loadPlaces = async () => {
+        try {
+            const response = await fetch('places.json'); // Load places from external file
+            const places = await response.json(); // Parse the JSON data
 
-        places.features.forEach((feature) => {
-            const symbol = feature.properties['icon'];
-            const layerID = `poi-${symbol}`;
+            // Add places source to map
+            map.addSource('places', {
+                'type': 'geojson',
+                'data': places
+            });
 
-            // Add a layer for each icon type
-            if (!map.getLayer(layerID)) {
-                map.addLayer({
-                    'id': layerID,
-                    'type': 'symbol',
-                    'source': 'places',
-                    'layout': {
-                        'icon-image': `${symbol}_15`,
-                        'icon-overlap': 'always'
-                    },
-                    'filter': ['==', 'icon', symbol]
+            places.features.forEach((feature) => {
+                const symbol = feature.properties['icon'];
+                const layerID = `poi-${symbol}`;
+
+                // Add a layer for each icon type
+                if (!map.getLayer(layerID)) {
+                    map.addLayer({
+                        'id': layerID,
+                        'type': 'symbol',
+                        'source': 'places',
+                        'layout': {
+                            'icon-image': `${symbol}_15`,
+                            'icon-overlap': 'always'
+                        },
+                        'filter': ['==', 'icon', symbol]
+                    });
+
+                    // Create a checkbox to toggle the visibility of the layers
+                    const input = document.createElement('input');
+                    input.type = 'checkbox';
+                    input.id = layerID;
+                    input.checked = true;
+                    filterGroup.appendChild(input);
+
+                    const label = document.createElement('label');
+                    label.setAttribute('for', layerID);
+
+                    // Create a custom checkbox element
+                    const customCheckbox = document.createElement('span');
+                    customCheckbox.className = 'custom-checkbox'; // Apply custom styles
+
+                    label.appendChild(customCheckbox); // Append custom checkbox to label
+                    label.appendChild(document.createTextNode(symbol)); // Append text to label
+                    filterGroup.appendChild(label);
+
+                    input.addEventListener('change', (e) => {
+                        map.setLayoutProperty(
+                            layerID,
+                            'visibility',
+                            e.target.checked ? 'visible' : 'none'
+                        );
+                    });
+                }
+            });
+
+            // Add popup functionality when a symbol is clicked
+            map.on('click', (e) => {
+                const features = map.queryRenderedFeatures(e.point, { layers: map.getStyle().layers.map(layer => layer.id) });
+                if (features[0] == undefined || features[0].properties.description == undefined) return;
+
+                const feature = features[0];
+                const coordinates = feature.geometry.coordinates.slice();
+                const description = feature.properties.description;
+
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+
+                new maplibregl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+
+            // Change the cursor when hovering over each dynamically created layer
+            places.features.forEach((feature) => {
+                const symbol = feature.properties['icon'];
+                const layerID = `poi-${symbol}`;
+
+                map.on('mouseenter', layerID, () => {
+                    map.getCanvas().style.cursor = 'pointer';
                 });
 
-                // Create a checkbox to toggle the visibility of the layers
-const input = document.createElement('input');
-input.type = 'checkbox';
-input.id = layerID;
-input.checked = true;
-filterGroup.appendChild(input);
-
-const label = document.createElement('label');
-label.setAttribute('for', layerID);
-
-// Create a custom checkbox element
-const customCheckbox = document.createElement('span');
-customCheckbox.className = 'custom-checkbox'; // Apply custom styles
-
-label.appendChild(customCheckbox); // Append custom checkbox to label
-label.appendChild(document.createTextNode(symbol)); // Append text to label
-filterGroup.appendChild(label);
-
-                input.addEventListener('change', (e) => {
-                    map.setLayoutProperty(
-                        layerID,
-                        'visibility',
-                        e.target.checked ? 'visible' : 'none'
-                    );
+                map.on('mouseleave', layerID, () => {
+                    map.getCanvas().style.cursor = '';
                 });
-            }
-        });
+            });
 
-        // Add popup functionality when a symbol is clicked
-        map.on('click', (e) => {
-            const features = map.queryRenderedFeatures(e.point, { layers: map.getStyle().layers.map(layer => layer.id) });
-            if (features[0] == undefined || features[0].properties.description == undefined) return;
+        } catch (error) {
+            console.error('Error loading places data:', error);
+        }
+    };
 
-            const feature = features[0];
-            const coordinates = feature.geometry.coordinates.slice();
-            const description = feature.properties.description;
+    // Call the function to load places data
+    map.on('load', loadPlaces);
 
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-            }
+    map.dragRotate.disable();
+    map.touchZoomRotate.disableRotation();
 
-            new maplibregl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
-        });
-
-       // Change the cursor when hovering over each dynamically created layer
-places.features.forEach((feature) => {
-    const symbol = feature.properties['icon'];
-    const layerID = `poi-${symbol}`;
-
-    map.on('mouseenter', layerID, () => {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-
-    map.on('mouseleave', layerID, () => {
-        map.getCanvas().style.cursor = '';
-    });
-});
-
-    
-map.dragRotate.disable();
- 
-map.touchZoomRotate.disableRotation();
-
-var nav = new maplibregl.NavigationControl();
-map.addControl(nav, 'top-left');
-
-    });
+    var nav = new maplibregl.NavigationControl();
+    map.addControl(nav, 'top-left');
 </script>
 </body>
 </html>
