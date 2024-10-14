@@ -5,7 +5,16 @@
             "type": "Feature",
             "properties": {
                 "icon": "waerme",
-                "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>"
+                "title": "Name der Anlage",
+                "properties": ["sonde"],
+                "details": [
+                    {
+                    "Ptherm" : "thermische Leistung",
+                    "Pel" :  "elektrische Leistung",
+                    "Tmax": "maximale Thermalwassertemperatur",
+                    "Teufe":  "senkrechte Tiefe der Bohrung"
+                    }
+                ]
             },
             "geometry": {
                 "type": "Point",
@@ -16,8 +25,17 @@
             "type": "Feature",
             "properties": {
                 "icon": "strom",
-                "description": "<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar is throwing a <a href=\"http://tallulaeatbar.ticketleap.com/2012beachblanket/\" target=\"_blank\" title=\"Opens in a new window\">Big Backyard Beach Bash</a> on Saturday.</p>"
-            },
+                "title": "Name der Anlage",
+                "properties": [],
+                "details": [
+                    {
+                        "Ptherm" : "thermische Leistung",
+                        "Pel" :  "elektrische Leistung",
+                        "Tmax": "maximale Thermalwassertemperatur",
+                        "Teufe":  "senkrechte Tiefe der Bohrung"
+                        }
+                ]
+                },
             "geometry": {
                 "type": "Point",
                 "coordinates": [10.11, 51.41]
@@ -27,34 +45,62 @@
             "type": "Feature",
             "properties": {
                 "icon": "bau",
-                "description": "<strong>Seersucker Bike Ride and Social</strong><p>Get fancy, grab your bike, and take part in this year&#39;s <a href=\"http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/\" target=\"_blank\" title=\"Opens in a new window\">Seersucker Social</a> bike ride.</p>"
-            },
+                "title": "Name der Anlage",
+                "properties": [],
+                "details": [
+                    {
+                        "Ptherm" : "thermische Leistung",
+                        "Pel" :  "elektrische Leistung",
+                        "Tmax": "maximale Thermalwassertemperatur",
+                        "Teufe":  "senkrechte Tiefe der Bohrung"
+                        }
+                ]
+                },
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.32, 51.12]
+                "coordinates": [10.51, 51.21]
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "planung",
-                "description": "<strong>Capital Pride Parade</strong><p>The annual <a href=\"https://www.capitalpride.org/parade\" target=\"_blank\" title=\"Opens in a new window\">Capital Pride Parade</a> makes its way through Dupont this Saturday. Free.</p>"
-            },
+                "title": "Name der Anlage",
+                "properties": [],
+                "details": [
+                    {
+                        "Ptherm" : "thermische Leistung",
+                        "Pel" :  "elektrische Leistung",
+                        "Tmax": "maximale Thermalwassertemperatur",
+                        "Teufe":  "senkrechte Tiefe der Bohrung"
+                        }
+                ]
+                },
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.23, 51.23]
+                "coordinates": [10.71, 51.11]
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "forschung",
-                "description": "<strong>Capital Pride Parade</strong><p>The annual <a href=\"https://www.capitalpride.org/parade\" target=\"_blank\" title=\"Opens in a new window\">Capital Pride Parade</a> makes its way through Dupont this Saturday. Free.</p>"
-            },
+                "title": "Name der Anlage",
+                "properties": [],
+                "details": [
+                    {
+                        "Ptherm" : "thermische Leistung",
+                        "Pel" :  "elektrische Leistung",
+                        "Tmax": "maximale Thermalwassertemperatur",
+                        "Teufe":  "senkrechte Tiefe der Bohrung"
+                        }
+                ]
+                },
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.13, 51.63]
+                "coordinates": [10.81, 51.11]
             }
         }
+    
     ]
 }

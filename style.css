@@ -1,4 +1,8 @@
+
 body {
+
+    font-family: 'Titillium Web', sans-serif;
+    color: #333333; /* Dark grey color */
   height: 600px; 
   width: 800px; 
   margin: 0 auto; 
@@ -9,7 +13,7 @@ html, body, #map {
 }
 
 .filter-group {
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 12px/20px 'Titillium Web', sans-serif;
   font-weight: normal;
   position: absolute;
   top: 10px;
@@ -85,6 +89,8 @@ html, body, #map {
   border-radius: 50%; /* Make it circular */
   margin-right: 8px; /* Space between circle and label text */
   vertical-align: middle; /* Aligns it nicely with text */
+  position: absolute; /* Absolute positioning */
+  right: 10px; /* Align to the right of the filter group */
 }
 
 .maplibregl-popup {
