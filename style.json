@@ -6905,7 +6905,7 @@
             "source-layer": "place",
             "minzoom": 5,
             "maxzoom": 7,
-            "layout": {
+            "layout": { 
                 "text-font": [
                     "Roboto Medium",
                     "Noto Sans Regular"

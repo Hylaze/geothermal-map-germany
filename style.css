@@ -1,0 +1,93 @@
+body {
+  height: 600px; 
+  width: 800px; 
+  margin: 0 auto; 
+  padding: 0;
+}
+html, body, #map {
+  height: 100%; 
+}
+
+.filter-group {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  border-radius: 3px;
+  width: 180px; /* Increase width for better layout */
+  background: rgb(255, 255, 255); /* Semi-transparent background */
+  padding: 10px; /* Padding for better spacing */
+}
+
+.filter-group input[type='checkbox'] {
+  display: none; /* Hide original checkbox */
+}
+
+/* Style the custom checkbox */
+.custom-checkbox {
+  display: inline-block;
+  width: 13px; /* Outer circle width */
+  height: 13px; /* Outer circle height */
+  border: 2px solid black; /* Black border */
+  border-radius: 50%; /* Make it circular */
+  position: relative; /* Position relative for inner circle */
+  cursor: pointer; /* Show pointer on hover */
+  transition: background-color 0.2s, border-color 0.2s; /* Smooth transition */
+  margin-right: 8px; /* Add space between checkbox and text */
+}
+
+/* Show inner circle when checkbox is checked */
+.filter-group input[type='checkbox']:checked + label .custom-checkbox {
+  background-color: rgb(255, 255, 255); /* Inner circle color when checked */
+}
+
+/* Style the inner circle */
+.custom-checkbox:after {
+  content: '';
+  position: absolute;
+  width: 9px; /* Width of the inner circle */
+  height: 9px; /* Height of the inner circle */
+  background-color: rgb(0, 0, 0); /* Inner circle color */
+  border-radius: 50%; /* Make it circular */
+  left: 50%; /* Center it */
+  top: 50%; /* Center it */
+  transform: translate(-50%, -50%); /* Adjust position */
+  opacity: 0; /* Hide inner circle initially */
+  transition: opacity 0.2s; /* Smooth transition for inner circle */
+}
+
+/* Show inner circle when checkbox is checked */
+.filter-group input[type='checkbox']:checked + label .custom-checkbox:after {
+  opacity: 1; /* Show inner circle */
+}
+
+/* Style the label */
+.filter-group label {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Change font weight for checked labels */
+.filter-group input[type='checkbox']:checked + label {
+  font-weight: bold; /* Bold font for checked labels */
+}
+
+/* Color indicator */
+.color-indicator {
+  display: inline-block; /* Allow it to be inline with text */
+  width: 10px; /* Circle width */
+  height: 10px; /* Circle height */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 8px; /* Space between circle and label text */
+  vertical-align: middle; /* Aligns it nicely with text */
+}
+
+.maplibregl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

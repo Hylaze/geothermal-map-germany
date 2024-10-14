@@ -1,106 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Filter symbols with Popups on Click</title>
-    <meta property="og:description" content="Filter a set of symbols with popup descriptions on click." />
+    <title>Geothermieanlagen in Deutschland</title>
+    <meta property="og:description" content="Übersichtskarte der Geothermieanlagen in Deutschland" />
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
+     <link rel="stylesheet" href="style.css">
     <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
-    <style>
-      body { margin: 0; padding: 0; }
-      html, body, #map { height: 100%; }
-  
-      .filter-group {
-          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-          font-weight: normal;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          z-index: 1;
-          border-radius: 3px;
-          width: 150px; /* Increase width for better layout */
-          background: rgb(255, 255, 255); /* Semi-transparent background */
-          padding: 10px; /* Padding for better spacing */
-      }
-  
-      /* Hide the default checkbox */
-      .filter-group input[type='checkbox'] {
-          display: none; /* Hide original checkbox */
-      }
-  
-      /* Style the custom checkbox */
-      .custom-checkbox {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          border: 2px solid #3386c0; /* Border color */
-          border-radius: 3px; /* Rounded corners */
-          margin-right: 8px; /* Space between checkbox and label */
-          position: relative;
-          cursor: pointer; /* Show pointer on hover */
-          transition: background-color 0.2s, border-color 0.2s; /* Smooth transition */
-      }
-  
-      /* Style the checked state */
-      .filter-group input[type='checkbox']:checked + label .custom-checkbox {
-          background-color: #4ea0da; /* Background color when checked */
-          border-color: #4ea0da; /* Border color when checked */
-      }
-  
-      /* Style the checkmark */
-      .custom-checkbox:after {
-          content: '';
-          position: absolute;
-          width: 4px; /* Width of the checkmark */
-          height: 10px; /* Height of the checkmark */
-          border: solid white; /* Checkmark color */
-          border-width: 0 2px 2px 0; /* Create a checkmark shape */
-          transform: rotate(45deg);
-          left: 8px; /* Position checkmark */
-          top: 3px; /* Position checkmark */
-          opacity: 0; /* Hide checkmark initially */
-          transition: opacity 0.2s; /* Smooth transition for checkmark */
-      }
-  
-      /* Show checkmark when checkbox is checked */
-      .filter-group input[type='checkbox']:checked + label .custom-checkbox:after {
-          opacity: 1; /* Show checkmark */
-      }
-  
-      /* Change font weight for checked labels */
-      .filter-group input[type='checkbox']:checked + label {
-          font-weight: bold; /* Bold font for checked labels */
-      }
 
-      /* Keep normal font weight for unchecked labels */
-      .filter-group label {
-          display: flex; /* Use flexbox for alignment */
-          align-items: center; /* Center items vertically */
-          cursor: pointer;
-          padding: 10px;
-          transition: background-color 0.3s; /* Smooth background color transition */
-      }
-  
-      .maplibregl-popup {
-          max-width: 400px;
-          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      }
-  </style>
 </head>
 <body>
-<div id="map"></div>
-<nav id="filter-group" class="filter-group"></nav>
+<div id="map">
+<nav id="filter-group" class="filter-group"></nav> </div>
 
 <script>
     const filterGroup = document.getElementById('filter-group');
     const map = new maplibregl.Map({
         container: 'map',
         style: 'style.json',
-        center: [-77.04, 38.907],
-        zoom: 11.15
+        center: [10.00, 51.50],
+        zoom: 3,
+        maxBounds: [[3.0, 47.0], [18.0, 56.0]]
     });
 
+    const iconColorMap = {
+    'waerme': '#e51626', // darkred
+    'strom': '#f76d6d', // lightred
+    'bau': '#025893', // blue
+    'planung': '#60bf59', // green
+    'forschung': '#95338a' // purple
+};
+
+const checkboxLabelMap = {
+    'waerme': 'Wärmebereitstellung', // darkred
+    'strom': 'Stromerzeugung', // lightred
+    'bau': 'in Bau', // blue
+    'planung': 'Planung', // green
+    'forschung': 'Forschung' // purple
+};
     // Function to load GeoJSON from external file
     const loadPlaces = async () => {
         try {
@@ -121,12 +59,17 @@
                 if (!map.getLayer(layerID)) {
                     map.addLayer({
                         'id': layerID,
-                        'type': 'symbol',
-                        'source': 'places',
-                        'layout': {
-                            'icon-image': `${symbol}_15`,
-                            'icon-overlap': 'always'
-                        },
+                        'type': 'circle',  // Use 'circle' for a simple round marker
+                        'source': 'places', // Specify the source
+                    'paint': {
+                        'circle-color': iconColorMap[symbol],
+                    'circle-radius': [
+                    'interpolate', 
+                    ['linear'], 
+                    ['zoom'], 
+                    5, 4,  // At zoom level 5, the circle radius will be 6
+                    10, 12  // At zoom level 10, the circle radius will be 12
+                ]},
                         'filter': ['==', 'icon', symbol]
                     });
 
@@ -143,9 +86,16 @@
                     // Create a custom checkbox element
                     const customCheckbox = document.createElement('span');
                     customCheckbox.className = 'custom-checkbox'; // Apply custom styles
-
+    
                     label.appendChild(customCheckbox); // Append custom checkbox to label
-                    label.appendChild(document.createTextNode(symbol)); // Append text to label
+                    label.appendChild(document.createTextNode(checkboxLabelMap[symbol])); // Append text to label
+                    filterGroup.appendChild(label);
+
+                    // create a color indicator element
+                    const colorIndicator = document.createElement('span');
+                    colorIndicator.className = 'color-indicator'; // Apply custom styles
+                    label.appendChild(colorIndicator); // Append custom checkbox to label
+                    colorIndicator.style.backgroundColor = iconColorMap[symbol]; 
                     filterGroup.appendChild(label);
 
                     input.addEventListener('change', (e) => {
@@ -197,13 +147,12 @@
     };
 
     // Call the function to load places data
-    map.on('load', loadPlaces);
-
+    map.on('load', () => {
+            loadPlaces();
+        });
+    touchZoomRotate.disableRotation() 
     map.dragRotate.disable();
     map.touchZoomRotate.disableRotation();
-
-    var nav = new maplibregl.NavigationControl();
-    map.addControl(nav, 'top-left');
 </script>
 </body>
 </html>
