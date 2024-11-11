@@ -1,17 +1,33 @@
 
+html, body, #map {
+  height: 100%; /* Full height */
+  width: 100%;  /* Full width */
+}
 body {
-
-    font-family: 'Titillium Web', sans-serif;
-    color: #333333; /* Dark grey color */
-  height: 600px; 
-  width: 800px; 
+  font-family: 'Titillium Web', sans-serif;
+  color: #333333; /* Dark grey color */
   margin: 0 auto; 
   padding: 0;
 }
-html, body, #map {
-  height: 100%; 
-}
+@media (max-width: 768px) {
+  .filter-group {
+      position: relative; /* Use relative positioning for better flow on small screens */
+      top: auto;
+      right: auto;
+      width: 100%; /* Use full width on smaller screens */
+      padding: 10px 5px; /* Reduce padding to fit smaller screen */
+      font-size: 14px; /* Slightly larger font for readability */
+      z-index: 2; /* Ensure it's visible over the map */
+  }
 
+  .filter-group input[type='checkbox']:checked + label {
+      font-weight: normal; /* Avoid bold text on small screens */
+  }
+
+  #map {
+      height: 50vh; /* Set map height to 50% of the viewport height */
+  }
+}
 .filter-group {
   font: 12px/20px 'Titillium Web', sans-serif;
   font-weight: normal;
@@ -35,7 +51,6 @@ html, body, #map {
   width: 13px; /* Outer circle width */
   height: 13px; /* Outer circle height */
   border: 2px solid black; /* Black border */
-  border-radius: 50%; /* Make it circular */
   position: relative; /* Position relative for inner circle */
   cursor: pointer; /* Show pointer on hover */
   transition: background-color 0.2s, border-color 0.2s; /* Smooth transition */
@@ -54,12 +69,12 @@ html, body, #map {
   width: 9px; /* Width of the inner circle */
   height: 9px; /* Height of the inner circle */
   background-color: rgb(0, 0, 0); /* Inner circle color */
-  border-radius: 50%; /* Make it circular */
   left: 50%; /* Center it */
   top: 50%; /* Center it */
   transform: translate(-50%, -50%); /* Adjust position */
   opacity: 0; /* Hide inner circle initially */
   transition: opacity 0.2s; /* Smooth transition for inner circle */
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 /* Show inner circle when checkbox is checked */
@@ -96,4 +111,106 @@ html, body, #map {
 .maplibregl-popup {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+@media (max-width: 768px) {
+  .custom-checkbox {
+      width: 16px; /* Slightly larger outer circle */
+      height: 16px; /* Larger area for touch targets */
+  }
+
+  .filter-group label {
+      font-size: 14px;  /* Larger font size for better readability */
+      padding: 8px;  /* Reduce padding to make labels fit better */
+  }
+}
+.maplibregl-popup {
+  max-width: 90%; /* Make popups smaller on mobile */
+  font-size: 14px; /* Slightly larger font for better readability */
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .maplibregl-popup {
+      max-width: 95%; /* Max width of popup on small screens */
+      font-size: 13px; /* Adjust font size for mobile */
+  }
+}
+
+html, body, #map {
+    height: 100%; /* Full height */
+    width: 100%;  /* Full width */
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #333333; /* Dark grey color */
+    margin: 0 auto; 
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    .filter-group {
+        position: relative; /* Use relative positioning for better flow on small screens */
+        top: auto;
+        right: auto;
+        width: 100%; /* Use full width on smaller screens */
+        padding: 10px 5px; /* Reduce padding to fit smaller screen */
+        font-size: 14px; /* Slightly larger font for readability */
+        z-index: 2; /* Ensure it's visible over the map */
+    }
+
+    .filter-group input[type='checkbox']:checked + label {
+        font-weight: normal; /* Avoid bold text on small screens */
+    }
+
+    #map {
+        height: 50vh; /* Set map height to 50% of the viewport height */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .custom-checkbox {
+        width: 16px; /* Slightly larger outer circle */
+        height: 16px; /* Larger area for touch targets */
+    }
+
+    .filter-group label {
+        font-size: 14px;  /* Larger font size for better readability */
+        padding: 8px;  /* Reduce padding to make labels fit better */
+    }
+}
+
+.maplibregl-popup {
+    max-width: 90%; /* Make popups smaller on mobile */
+    font-size: 14px; /* Slightly larger font for better readability */
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .maplibregl-popup {
+        max-width: 95%; /* Max width of popup on small screens */
+        font-size: 13px; /* Adjust font size for mobile */
+    }
+}
+
+#toggle-filters {
+  display: block;
+  margin: 10px 0;
+  background-color: #025893;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+    #filter-group {
+        position: relative;
+        font-size: 14px;
+        padding: 10px;
+    }
+    #filters-content {
+        display: none;
+    }
 }

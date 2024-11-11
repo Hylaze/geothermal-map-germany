@@ -4,7 +4,7 @@
         {
             "type": "Feature",
             "properties": {
-                "icon": "waerme",
+                "icon": "waerme_strom",
                 "title": "Name der Anlage",
                 "properties": ["sonde"],
                 "details": [
@@ -19,6 +19,26 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [10.1, 51.1]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "waerme",
+                "title": "Name der Anlage",
+                "properties": ["sonde"],
+                "details": [
+                    {
+                    "Ptherm" : "thermische Leistung",
+                    "Pel" :  "elektrische Leistung",
+                    "Tmax": "maximale Thermalwassertemperatur",
+                    "Teufe":  "senkrechte Tiefe der Bohrung"
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.99, 51.1]
             }
         },
         {

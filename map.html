@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geothermieanlagen in Deutschland</title>
+    <meta property="og:description" content="Übersichtskarte der Geothermieanlagen in Deutschland" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
+</head>
+<body>
+<h4>Tiefe Geothermie in Deutschland</h4>
+<div id="map">
+    <nav id="filter-group" class="filter-group">
+        <h3>
+            Filter nach Arten der Anlage
+            <button id="toggle-filters" class="toggle-button">Filter Aus</button>
+        </h3>
+        <div id="filters-content">
+            <!-- Filter checkboxes will go here -->
+        </div>
+    </nav>
+</div>
+<script>
+    const filterGroup = document.getElementById('filter-group');
+    const toggleButton = document.getElementById('toggle-filters');
+    const filtersContent = document.getElementById('filters-content');
+    
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: 'style.json',
+        center: [10.00, 51.50],
+        zoom: 1,
+        maxBounds: [[3.0, 47.0], [18.0, 56.0]]
+    });
+
+    const iconColorMap = {
+        'wärme': '#e51626',
+        'wärme_strom': '#ff8c00',
+        'Strom': '#ffdd00',
+        'bau': '#025893',
+        'planung': '#60bf59',
+        'Forschung': '#95338a'
+    };
+
+    const checkboxLabelMap = {
+        'wärme_strom': 'Wärmebereitstellung und Stromerzeugung',
+        'wärme': 'ausschließlich Wärmebereitstellung',
+        'Strom': 'ausschließlich Stromerzeugung',
+        'bau': 'in Bau',
+        'planung': 'in Planung',
+        'Forschung': 'Forschung'
+    };
+
+    const loadPlaces = async () => {
+        try {
+            const response = await fetch('anlagen.json');
+            const places = await response.json();
+            console.log('Loaded GeoJSON:', places);
+
+            places.features.forEach(feature => {
+                const useTypes = feature.properties.use;
+
+                if (useTypes.includes("wärme") && useTypes.includes("Strom")) {
+                    feature.properties.icon = "wärme_strom";
+                } else if (useTypes.includes("wärme")) {
+                    feature.properties.icon = "waerme";
+                } else if (useTypes.includes("strom")) {
+                    feature.properties.icon = "strom";
+                } else if (useTypes.includes("Forschung")) {
+                    feature.properties.icon = "Forschung";
+                } else if (useTypes.includes("Bau")) {
+                    feature.properties.icon = "bau";
+                } else if (useTypes.includes("Planung")) {
+                    feature.properties.icon = "planung";
+                } else {
+                    feature.properties.icon = useTypes[0].toLowerCase();
+                }
+            });
+
+            map.addSource('places', {
+                'type': 'geojson',
+                'data': places
+            });
+
+            const filterTitle = document.createElement('h3');
+            filterGroup.appendChild(filterTitle);
+
+            Object.keys(iconColorMap).forEach((symbol) => {
+                const layerID = `poi-${symbol}`;
+
+                map.addLayer({
+                    'id': layerID,
+                    'type': 'circle',
+                    'source': 'places',
+                    'paint': {
+                        'circle-color': iconColorMap[symbol],
+                        'circle-radius': [
+                            'interpolate',
+                            ['linear'],
+                            ['zoom'],
+                            5, 4,
+                            10, 12
+                        ],
+                        'circle-opacity': 0.8
+                    },
+                    'filter': ['==', ['get', 'icon'], symbol]
+                });
+
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = layerID;
+                input.checked = true;
+                filtersContent.appendChild(input);
+
+                const label = document.createElement('label');
+                label.setAttribute('for', layerID);
+                const customCheckbox = document.createElement('span');
+                customCheckbox.className = 'custom-checkbox';
+                label.appendChild(customCheckbox);
+                label.appendChild(document.createTextNode(checkboxLabelMap[symbol]));
+
+                const colorIndicator = document.createElement('span');
+                colorIndicator.className = 'color-indicator';
+                colorIndicator.style.backgroundColor = iconColorMap[symbol];
+                label.appendChild(colorIndicator);
+                filtersContent.appendChild(label);
+
+                input.addEventListener('change', (e) => {
+                    map.setLayoutProperty(
+                        layerID,
+                        'visibility',
+                        e.target.checked ? 'visible' : 'none'
+                    );
+                });
+            });
+
+            map.on('click', (e) => {
+                const features = map.queryRenderedFeatures(e.point, { layers: map.getStyle().layers.map(layer => layer.id) });
+                if (!features.length || !features[0].properties.title) return;
+
+                const feature = features[0];
+                const coordinates = feature.geometry.coordinates.slice();
+                const title = feature.properties.title;
+                const details = JSON.parse(feature.properties.details);
+
+                let popupContent = `<strong>${feature.properties.title}</strong><br><ul>`;
+
+                if (details.Ptherm && details.Ptherm !== '') {
+                    popupContent += `<li>Ptherm: ${details.Ptherm}</li>`;
+                }
+                if (details.Pel && details.Pel !== '') {
+                    popupContent += `<li>Pel: ${details.Pel}</li>`;
+                }
+                if (details.Tmax && details.Tmax !== '') {
+                    popupContent += `<li>Tmax: ${details.Tmax}</li>`;
+                }
+                if (details.Teufe && details.Teufe !== '') {
+                    popupContent += `<li>Teufe: ${details.Teufe}</li>`;
+                }
+                if (details.Förderrate && details.Förderrate !== '') {
+                    popupContent += `<li>Förderrate: ${details.Förderrate}</li>`;
+                }
+                if (details.Inbetriebnahme && details.Inbetriebnahme !== '') {
+                    popupContent += `<li>Inbetriebnahme: ${details.Inbetriebnahme}</li>`;
+                }
+
+                popupContent += `</ul>`;
+
+                new maplibregl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(popupContent)
+                    .addTo(map);
+            });
+
+            Object.keys(iconColorMap).forEach((symbol) => {
+                const layerID = `poi-${symbol}`;
+                map.on('mouseenter', layerID, () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', layerID, () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+
+        } catch (error) {
+            console.error('Error loading places data:', error);
+        }
+    };
+
+    map.on('load', () => {
+        loadPlaces();
+    });
+
+    map.dragRotate.disable();
+    map.touchZoomRotate.disableRotation();
+
+    // Toggle filters visibility on button click
+    toggleButton.addEventListener('click', () => {
+        const isVisible = filtersContent.style.display === 'block';
+        filtersContent.style.display = isVisible ? 'none' : 'block';
+        toggleButton.textContent = isVisible ? 'Filter An' : 'Filter Aus'; // Change button text
+    });
+
+</script>
+</body>
+</html>
