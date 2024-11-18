@@ -32,14 +32,14 @@
         container: 'map',
         style: 'style.json',
         center: [10.00, 51.50],
-        zoom: 1,
-        maxBounds: [[3.0, 47.0], [18.0, 56.0]]
+        zoom: 3, // You may want to increase the zoom level to see smaller details
+        maxBounds: [[3.0, 47.0], [18.0, 56.0]] // Adjust bounds if needed
     });
 
     const iconColorMap = {
-        'wärme': '#e51626',
+        'Fernwärme': '#e51626',
         'wärme_strom': '#ff8c00',
-        'Strom': '#ffdd00',
+        'Stromerzeugung': '#e1c200',  // darker yellow
         'bau': '#025893',
         'planung': '#60bf59',
         'Forschung': '#95338a'
@@ -47,8 +47,8 @@
 
     const checkboxLabelMap = {
         'wärme_strom': 'Wärmebereitstellung und Stromerzeugung',
-        'wärme': 'ausschließlich Wärmebereitstellung',
-        'Strom': 'ausschließlich Stromerzeugung',
+        'Fernwärme': 'ausschließlich Wärmebereitstellung',
+        'Stromerzeugung': 'ausschließlich Stromerzeugung',
         'bau': 'in Bau',
         'planung': 'in Planung',
         'Forschung': 'Forschung'
@@ -56,19 +56,19 @@
 
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen.json');
+            const response = await fetch('anlagen_clean.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
 
             places.features.forEach(feature => {
                 const useTypes = feature.properties.use;
 
-                if (useTypes.includes("wärme") && useTypes.includes("Strom")) {
+                if (useTypes.includes("Fernwärme") && useTypes.includes("Stromerzeugung")) {
                     feature.properties.icon = "wärme_strom";
-                } else if (useTypes.includes("wärme")) {
-                    feature.properties.icon = "waerme";
-                } else if (useTypes.includes("strom")) {
-                    feature.properties.icon = "strom";
+                } else if (useTypes.includes("Fernwärme")) {
+                    feature.properties.icon = "Fernwärme";
+                } else if (useTypes.includes("Stromerzeugung")) {
+                    feature.properties.icon = "Stromerzeugung";
                 } else if (useTypes.includes("Forschung")) {
                     feature.properties.icon = "Forschung";
                 } else if (useTypes.includes("Bau")) {
@@ -148,22 +148,22 @@
 
                 let popupContent = `<strong>${feature.properties.title}</strong><br><ul>`;
 
-                if (details.Ptherm && details.Ptherm !== '') {
+                if (details.Ptherm && details.Ptherm !== 'unavailable MW') {
                     popupContent += `<li>Ptherm: ${details.Ptherm}</li>`;
                 }
-                if (details.Pel && details.Pel !== '') {
+                if (details.Pel && details.Pel !== 'unavailable') {
                     popupContent += `<li>Pel: ${details.Pel}</li>`;
                 }
-                if (details.Tmax && details.Tmax !== '') {
+                if (details.Tmax && details.Tmax !== 'unavailable') {
                     popupContent += `<li>Tmax: ${details.Tmax}</li>`;
                 }
-                if (details.Teufe && details.Teufe !== '') {
+                if (details.Teufe && details.Teufe !== 'unavailable') {
                     popupContent += `<li>Teufe: ${details.Teufe}</li>`;
                 }
-                if (details.Förderrate && details.Förderrate !== '') {
+                if (details.Förderrate && details.Förderrate !== 'unavailable') {
                     popupContent += `<li>Förderrate: ${details.Förderrate}</li>`;
                 }
-                if (details.Inbetriebnahme && details.Inbetriebnahme !== '') {
+                if (details.Inbetriebnahme && details.Inbetriebnahme !== 'kein Eintrag') {
                     popupContent += `<li>Inbetriebnahme: ${details.Inbetriebnahme}</li>`;
                 }
 
