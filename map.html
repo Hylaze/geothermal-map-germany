@@ -16,44 +16,83 @@
     <nav id="filter-group" class="filter-group">
         <h3>
             Filter nach Arten der Anlage
-            <button id="toggle-filters" class="toggle-button">Filter Aus</button>
+            <button id="toggle-filters" class="toggle-button">Filter Ausblenden</button>
         </h3>
         <div id="filters-content">
-            <!-- Filter checkboxes will go here -->
         </div>
     </nav>
 </div>
+<!-- Slideshow container -->
+<div id="slideshow"></div>
 <script>
-    const filterGroup = document.getElementById('filter-group');
+     const filterGroup = document.getElementById('filter-group');
     const toggleButton = document.getElementById('toggle-filters');
     const filtersContent = document.getElementById('filters-content');
+    const slideshow = document.getElementById('slideshow');
     
     const map = new maplibregl.Map({
         container: 'map',
         style: 'style.json',
         center: [10.00, 51.50],
-        zoom: 3, // You may want to increase the zoom level to see smaller details
-        maxBounds: [[3.0, 47.0], [18.0, 56.0]] // Adjust bounds if needed
+        zoom: 3, 
+        maxBounds: [[3.0, 47.0], [18.0, 56.0]] 
     });
 
     const iconColorMap = {
-        'Fernwärme': '#e51626',
+        'fernwärme': '#e51626',
         'wärme_strom': '#ff8c00',
-        'Stromerzeugung': '#e1c200',  // darker yellow
+        'stromerzeugung': '#e1c200',
         'bau': '#025893',
         'planung': '#60bf59',
-        'Forschung': '#95338a'
+        'forschung': '#95338a'
     };
 
     const checkboxLabelMap = {
         'wärme_strom': 'Wärmebereitstellung und Stromerzeugung',
-        'Fernwärme': 'ausschließlich Wärmebereitstellung',
-        'Stromerzeugung': 'ausschließlich Stromerzeugung',
+        'fernwärme': 'ausschließlich Wärmebereitstellung',
+        'stromerzeugung': 'ausschließlich Stromerzeugung',
         'bau': 'in Bau',
         'planung': 'in Planung',
-        'Forschung': 'Forschung'
+        'forschung': 'Forschung'
+    };
+  // Slideshow implementation
+ 
+    // Slideshow for multiple images
+    const startSlideshow = () => {
+        const imageFolder = './images/';
+        const imageList = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'image9.jpg', 'image10.jpg'];
+        const imagesPerGroup = 5;
+        let currentIndex = 0;
+
+        const updateSlideshow = () => {
+            // Clear previous images
+            slideshow.innerHTML = '';
+
+            // Display the next 5 images
+            for (let i = 0; i < imagesPerGroup; i++) {
+                const imgIndex = (currentIndex + i) % imageList.length;
+                const img = document.createElement('img');
+                img.src = `${imageFolder}${imageList[imgIndex]}`;
+                img.alt = `Slideshow image ${imgIndex + 1}`;
+                img.className = 'slideshow-image';
+                slideshow.appendChild(img);
+            }
+
+            // Update index for the next group
+            currentIndex = (currentIndex + imagesPerGroup) % imageList.length;
+        };
+
+        // Initialize slideshow
+        updateSlideshow();
+
+        // Change images every 5 seconds
+        setInterval(updateSlideshow, 5000);
     };
 
+    map.on('load', () => {
+        loadPlaces();
+        startSlideshow();
+    });
     const loadPlaces = async () => {
         try {
             const response = await fetch('anlagen_clean.json');
@@ -63,17 +102,17 @@
             places.features.forEach(feature => {
                 const useTypes = feature.properties.use;
 
-                if (useTypes.includes("Fernwärme") && useTypes.includes("Stromerzeugung")) {
+                if (useTypes.includes("fernwärme") && useTypes.includes("stromerzeugung")) {
                     feature.properties.icon = "wärme_strom";
-                } else if (useTypes.includes("Fernwärme")) {
-                    feature.properties.icon = "Fernwärme";
-                } else if (useTypes.includes("Stromerzeugung")) {
-                    feature.properties.icon = "Stromerzeugung";
-                } else if (useTypes.includes("Forschung")) {
-                    feature.properties.icon = "Forschung";
-                } else if (useTypes.includes("Bau")) {
+                } else if (useTypes.includes("fernwärme")) {
+                    feature.properties.icon = "fernwärme";
+                } else if (useTypes.includes("stromerzeugung")) {
+                    feature.properties.icon = "stromerzeugung";
+                } else if (useTypes.includes("forschung")) {
+                    feature.properties.icon = "forschung";
+                } else if (useTypes.includes("bau")) {
                     feature.properties.icon = "bau";
-                } else if (useTypes.includes("Planung")) {
+                } else if (useTypes.includes("planung")) {
                     feature.properties.icon = "planung";
                 } else {
                     feature.properties.icon = useTypes[0].toLowerCase();
@@ -145,8 +184,13 @@
                 const coordinates = feature.geometry.coordinates.slice();
                 const title = feature.properties.title;
                 const details = JSON.parse(feature.properties.details);
-
-                let popupContent = `<strong>${feature.properties.title}</strong><br><ul>`;
+                const markerColor = iconColorMap[feature.properties.icon] || '#ffffff';
+let popupContent = `
+    <div style="background-color: ${markerColor}; color: white; padding: 5px; border-radius: 3px;">
+        <strong>${feature.properties.title}</strong>
+    </div>
+    <br>
+    <ul>`;
 
                 if (details.Ptherm && details.Ptherm !== 'unavailable MW') {
                     popupContent += `<li>Ptherm: ${details.Ptherm}</li>`;
@@ -201,7 +245,7 @@
     toggleButton.addEventListener('click', () => {
         const isVisible = filtersContent.style.display === 'block';
         filtersContent.style.display = isVisible ? 'none' : 'block';
-        toggleButton.textContent = isVisible ? 'Filter An' : 'Filter Aus'; // Change button text
+        toggleButton.textContent = isVisible ? 'Filter Anzeigen' : 'Filter Ausblenden'; 
     });
 
 </script>
