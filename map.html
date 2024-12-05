@@ -55,9 +55,9 @@
         'planung': 'in Planung',
         'forschung': 'Forschung'
     };
-  // Slideshow implementation
- 
-    // Slideshow for multiple images
+
+    // Slideshow implementation
+    // TODO: change to load images dynamically
     const startSlideshow = () => {
         const imageFolder = './images/';
         const imageList = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'image9.jpg', 'image10.jpg'];
@@ -65,10 +65,8 @@
         let currentIndex = 0;
 
         const updateSlideshow = () => {
-            // Clear previous images
             slideshow.innerHTML = '';
 
-            // Display the next 5 images
             for (let i = 0; i < imagesPerGroup; i++) {
                 const imgIndex = (currentIndex + i) % imageList.length;
                 const img = document.createElement('img');
@@ -78,21 +76,47 @@
                 slideshow.appendChild(img);
             }
 
-            // Update index for the next group
             currentIndex = (currentIndex + imagesPerGroup) % imageList.length;
         };
 
-        // Initialize slideshow
         updateSlideshow();
-
-        // Change images every 5 seconds
         setInterval(updateSlideshow, 5000);
     };
 
     map.on('load', () => {
         loadPlaces();
         startSlideshow();
+
+        // Add the boundary layer for Germany
+        map.addSource('germany-boundary', {
+            type: 'geojson',
+            data: 'germany_boundary.geojson'  // Your GeoJSON file URL here
+        });
+
+        map.addLayer({
+        id: 'germany-boundary-layer',
+        type: 'fill',
+        source: 'germany-boundary',
+        paint: {
+            'fill-color': '#000000', // Set a color for the boundary (you can keep this transparent if needed)
+            'fill-opacity': 1// Set opacity to 0 to make the boundary invisible
+        }
     });
+
+    // Mask all other areas outside Germany to make them invisible
+    // does not work - fix!!!
+    map.addLayer({
+        id: 'black-background',
+        type: 'fill',
+        paint: {
+            'fill-color': '#000000'  // Black color
+        },
+        source: 'germany-boundary',
+        filter: ['==', ['get', 'name'], 'Germany']
+    });
+    
+    });
+
     const loadPlaces = async () => {
         try {
             const response = await fetch('anlagen_clean.json');
@@ -185,12 +209,12 @@
                 const title = feature.properties.title;
                 const details = JSON.parse(feature.properties.details);
                 const markerColor = iconColorMap[feature.properties.icon] || '#ffffff';
-let popupContent = `
-    <div style="background-color: ${markerColor}; color: white; padding: 5px; border-radius: 3px;">
-        <strong>${feature.properties.title}</strong>
-    </div>
-    <br>
-    <ul>`;
+                let popupContent = `
+                    <div style="background-color: ${markerColor}; color: white; padding: 5px; border-radius: 3px;">
+                        <strong>${feature.properties.title}</strong>
+                    </div>
+                    <br>
+                    <ul>`;
 
                 if (details.Ptherm && details.Ptherm !== 'unavailable MW') {
                     popupContent += `<li>Ptherm: ${details.Ptherm}</li>`;
@@ -247,7 +271,6 @@ let popupContent = `
         filtersContent.style.display = isVisible ? 'none' : 'block';
         toggleButton.textContent = isVisible ? 'Filter Anzeigen' : 'Filter Ausblenden'; 
     });
-
 </script>
 </body>
 </html>

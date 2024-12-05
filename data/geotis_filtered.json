@@ -1,0 +1,1331 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.109431777080058,
+                    48.550153356543525
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Bau",
+                "title": "Altdorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "64,5 °C",
+                    "Teufe": "611 m",
+                    "Förderrate": "115 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.379666622638262,
+                    50.45255246067338
+                ]
+            },
+            "properties": {
+                "use": [
+                    "sonstige"
+                ],
+                "state": "Betrieb",
+                "title": "Andernach, Kaltwassergeysir",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "20 °C",
+                    "Teufe": "351,5 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.003896188222733,
+                    51.431306202705876
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Betrieb",
+                "title": "Arnsberg Erlenbach 2 (tiefe EWS)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,35 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "90 °C",
+                    "Teufe": "2835 m",
+                    "Förderrate": "20 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.734988698327786,
+                    48.170542327715914
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Aschheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "12,4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "87,1 °C",
+                    "Teufe": "2630 m",
+                    "Förderrate": "84,7 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.307370408769542,
+                    50.505466209296365
+                ]
+            },
+            "properties": {
+                "use": [
+                    "CO<sub>2</sub>-Gewinnung"
+                ],
+                "state": "Betrieb",
+                "title": "Bad Breisig, Ludgerussprudel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "26 °C",
+                    "Teufe": "608 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.307370408769542,
+                    50.505466209296365
+                ]
+            },
+            "properties": {
+                "use": [
+                    "CO<sub>2</sub>-Gewinnung"
+                ],
+                "state": "Betrieb",
+                "title": "Bad Breisig, Mariensprudel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "25,5 °C",
+                    "Teufe": "625 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.321141896960271,
+                    50.51465598754644
+                ]
+            },
+            "properties": {
+                "use": [
+                    "CO<sub>2</sub>-Gewinnung"
+                ],
+                "state": "Betrieb",
+                "title": "Bad Hönningen, Hönniger Sprudel-Neubohrung",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "31,2 °C",
+                    "Teufe": "580,8 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.299821269358382,
+                    51.48659342746747
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Betrieb",
+                "title": "Bochum Zeche Robert Müser",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "20 °C",
+                    "Teufe": "570 m",
+                    "Förderrate": "32 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.567386584802927,
+                    49.12572989419394
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Bruchsal",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,2 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "131 °C",
+                    "Teufe": "2450 m",
+                    "Förderrate": "31 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.528805440604287,
+                    49.38717316626822
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Bau",
+                "title": "Brühl",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "153 °C",
+                    "Teufe": "3290 m",
+                    "Förderrate": "70 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.726130891461885,
+                    47.996250100846254
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Dürrnhaar",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "141 °C",
+                    "Teufe": "3241 m",
+                    "Förderrate": "133 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.886350402690871,
+                    48.289792213335524
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Erding",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10,2 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "65 °C",
+                    "Teufe": "2240 m",
+                    "Förderrate": "48 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.405109198641737,
+                    48.138511875824356
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Freiham",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "13 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "91,87 °C",
+                    "Teufe": "2517,8 m",
+                    "Förderrate": "121 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.66291528907552,
+                    48.26126192560934
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Garching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7,95 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "75 °C",
+                    "Teufe": "2226,3 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.571571887105844,
+                    48.11868935553278
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Garching a. d. Alz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "6,88 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "125 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "125 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.434471292527942,
+                    47.8710290510463
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "Aktiv",
+                "title": "Geretsried",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "155,3 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "5 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.601612176917618,
+                    52.90381696285989
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "Aktiv",
+                "title": "Groß Schönebeck",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "150 °C",
+                    "Teufe": "4309,1 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.562880508759404,
+                    48.01998864023229
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Grünwald (Laufzorn)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "40 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "135 °C",
+                    "Teufe": "3755,2 m",
+                    "Förderrate": "132 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.826339230222407,
+                    52.40538249243043
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "Inaktiv",
+                "title": "Hannover (GeneSys)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "2 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "169 °C",
+                    "Teufe": "3820 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.954197353149135,
+                    49.84101897783786
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Betrieb",
+                "title": "Heubach (tiefe EWS)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,09 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "36,7 °C",
+                    "Teufe": "773 m",
+                    "Förderrate": "5 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.719357321494547,
+                    47.88189030335666
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Holzkirchen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "157 °C",
+                    "Teufe": "5078 m",
+                    "Förderrate": "65 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.328054251558454,
+                    52.90333311324816
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "Aktiv",
+                "title": "Horstberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "159 °C",
+                    "Teufe": "3920 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.153275626628721,
+                    49.15363259926349
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Insheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "165 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.697420933442515,
+                    48.22970537486774
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Ismaning",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7,2 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "78 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "85 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.820448786061359,
+                    54.115763163517606
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Bau",
+                "title": "Karlshagen / Usedom",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "57 °C",
+                    "Teufe": "1788 m",
+                    "Förderrate": "28 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.687849845382795,
+                    48.02701510509703
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Kirchstockach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "141 °C",
+                    "Teufe": "3649 m",
+                    "Förderrate": "140,5 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.645622608546594,
+                    48.09957536362663
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Kirchweidach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "30,6 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "127 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.121074550156372,
+                    49.18380273312805
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Landau in der Pfalz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "159 °C",
+                    "Teufe": "3291 m",
+                    "Förderrate": "70 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.654513269806042,
+                    47.88280454097704
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "Inaktiv",
+                "title": "Mauerstetten (Allgäu)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "130 °C",
+                    "Teufe": "4080 m",
+                    "Förderrate": "unavailable",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.716111846935974,
+                    48.134697803069514
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "München Riem",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "13 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "98,4 °C",
+                    "Teufe": "2747 m",
+                    "Förderrate": "87 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.557664351044714,
+                    48.116300282237844
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "München Schäftlarnstrasse",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "50 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "107 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "115 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.235606820955386,
+                    53.549095553624845
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Aquiferspeicher"
+                ],
+                "state": "Betrieb",
+                "title": "Neubrandenburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "80 °C",
+                    "Teufe": "1268 m",
+                    "Förderrate": "28 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.830142096367828,
+                    52.92971670587752
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Betrieb",
+                "title": "Neuruppin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "63,4 °C",
+                    "Teufe": "1675 m",
+                    "Förderrate": "3,9 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.58624277017484,
+                    53.370086444791845
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Neustadt-Glewe",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "99 °C",
+                    "Teufe": "2450 m",
+                    "Förderrate": "35 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.25284896542634,
+                    47.90513081785821
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Pfullendorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "75 °C",
+                    "Teufe": "1530 m",
+                    "Förderrate": "25 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.791471691465471,
+                    48.16723139267549
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Poing",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "9 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "85 °C",
+                    "Teufe": "2690 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.861446286865018,
+                    53.3215729197586
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Prenzlau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,15 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "108 °C",
+                    "Teufe": "2786 m",
+                    "Förderrate": "3,33 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.525744806831463,
+                    48.067708753419325
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Pullach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "16,5 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "106 °C",
+                    "Teufe": "3443 m",
+                    "Förderrate": "87 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.668797058077113,
+                    47.97278162324089
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Stromerzeugung"
+                ],
+                "state": "Betrieb",
+                "title": "Sauerlach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "141 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "120 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.010321196103183,
+                    48.257066211392576
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Simbach-Braunau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "9,4 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "81,7 °C",
+                    "Teufe": "1941,8 m",
+                    "Förderrate": "90 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.035525256557323,
+                    54.31021272312311
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Inaktiv",
+                "title": "Stralsund",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "unavailable MW",
+                    "Pel": "0 MW",
+                    "Tmax": "58 °C",
+                    "Teufe": "1603 m",
+                    "Förderrate": "28 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.555202373991184,
+                    48.875263721244984
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Straubing",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "2,1 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "36,5 °C",
+                    "Teufe": "824,8 m",
+                    "Förderrate": "31,4 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.620680194130214,
+                    48.02347753735028
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Taufkirchen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "40 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "136 °C",
+                    "Teufe": "3696 m",
+                    "Förderrate": "120 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.579492009460596,
+                    47.973032611148284
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Traunreut",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "12 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "120 °C",
+                    "Teufe": "4560 m",
+                    "Förderrate": "173,9 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.65806130750904,
+                    48.1933864433896
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Unterföhring",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "87 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "75 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.65830471015045,
+                    48.19419030042086
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Unterföhring II",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "11,3 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "93 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "90 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.597498830573379,
+                    48.05707719867894
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Unterhaching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "38 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "123,7 °C",
+                    "Teufe": "3350 m",
+                    "Förderrate": "140 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.580536621795996,
+                    48.27229792099072
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Unterschleißheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "80 °C",
+                    "Teufe": "1960 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.420294318053308,
+                    48.20130287457706
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Waldkraiburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "14 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "111,5 °C",
+                    "Teufe": "unavailable",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.706866064335136,
+                    53.50846808868685
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Fernwärme"
+                ],
+                "state": "Betrieb",
+                "title": "Waren / Müritz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,3 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "63 °C",
+                    "Teufe": "1547 m",
+                    "Förderrate": "17 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.641849987829817,
+                    49.53062084863661
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Gebäudeheizung"
+                ],
+                "state": "Betrieb",
+                "title": "Weinheim (Miramar)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,1 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "65 °C",
+                    "Teufe": "1150 m",
+                    "Förderrate": "10 l/s",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        }
+    ]
+}
