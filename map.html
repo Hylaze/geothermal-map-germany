@@ -44,7 +44,8 @@
         'stromerzeugung': '#e1c200',
         'bau': '#025893',
         'planung': '#60bf59',
-        'forschung': '#95338a'
+        'forschung': '#95338a',
+        'Hydrogeothermie': '#95338a'
     };
 
     const checkboxLabelMap = {
@@ -53,7 +54,8 @@
         'stromerzeugung': 'Stromerzeugung',
         'bau': 'in Bau',
         'planung': 'in Planung',
-        'forschung': 'Forschung'
+        'Forschung': 'Forschung',
+        'Hydrogeothermie':'Hydrogeothermie'
     };
 
     // Slideshow implementation
@@ -86,45 +88,18 @@
     map.on('load', () => {
         loadPlaces();
         startSlideshow();
-
-        // Add the boundary layer for Germany
-        map.addSource('germany-boundary', {
-            type: 'geojson',
-            data: 'germany_boundary.geojson'  // Your GeoJSON file URL here
-        });
-
-        map.addLayer({
-        id: 'germany-boundary-layer',
-        type: 'fill',
-        source: 'germany-boundary',
-        paint: {
-            'fill-color': '#000000', // Set a color for the boundary (you can keep this transparent if needed)
-            'fill-opacity': 1// Set opacity to 0 to make the boundary invisible
-        }
-    });
-
-    // Mask all other areas outside Germany to make them invisible
-    // does not work - fix!!!
-    map.addLayer({
-        id: 'black-background',
-        type: 'fill',
-        paint: {
-            'fill-color': '#000000'  // Black color
-        },
-        source: 'germany-boundary',
-        filter: ['==', ['get', 'name'], 'Germany']
-    });
-    
     });
 
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen_clean.json');
+            const response = await fetch('pr1.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
 
             places.features.forEach(feature => {
                 const useTypes = feature.properties.use;
+                console.log('Feature use:', feature.properties.use);
+
 
                 if (useTypes.includes("fernwärme") && useTypes.includes("stromerzeugung")) {
                     feature.properties.icon = "wärme_strom";
@@ -132,12 +107,14 @@
                     feature.properties.icon = "fernwärme";
                 } else if (useTypes.includes("stromerzeugung")) {
                     feature.properties.icon = "stromerzeugung";
-                } else if (useTypes.includes("forschung")) {
-                    feature.properties.icon = "forschung";
+                } else if (useTypes.includes("Forschung")) {
+                    feature.properties.icon = "Forschung";
                 } else if (useTypes.includes("bau")) {
                     feature.properties.icon = "bau";
                 } else if (useTypes.includes("planung")) {
                     feature.properties.icon = "planung";
+                } else if (useTypes.includes("Hydrogeothermie")) {
+                    feature.properties.icon = "Hydrogeothermie";
                 } else {
                     feature.properties.icon = useTypes[0].toLowerCase();
                 }
