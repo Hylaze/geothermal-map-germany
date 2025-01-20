@@ -109,7 +109,7 @@ const highlightOverlappingPoints = (point1, point2) => {
     let i = 0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen_projektliste2.json');
+            const response = await fetch('anlagen_projektliste3.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
             let points = [];

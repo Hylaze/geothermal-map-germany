@@ -7,7 +7,7 @@ def csv_to_geojson(input_csv, output_geojson):
         "features": []
     }
 
-    with open(input_csv, newline='', encoding='windows-1252') as csvfile:
+    with open(input_csv, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
 
         for row in reader:
@@ -53,6 +53,6 @@ def csv_to_geojson(input_csv, output_geojson):
         json.dump(geojson_data, geojsonfile, ensure_ascii=False, indent=4)
 
 # Example usage:
-input_csv = 'projektliste_dw2.csv'  # Replace with your input CSV file path
-output_geojson = 'anlagen_projektliste2.json'  # Replace with your desired GeoJSON output file path
+input_csv = 'projektliste_dw3.csv'  # Replace with your input CSV file path
+output_geojson = 'anlagen_projektliste3.json'  # Replace with your desired GeoJSON output file path
 csv_to_geojson(input_csv, output_geojson)
