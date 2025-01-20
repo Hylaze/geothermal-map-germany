@@ -39,28 +39,26 @@
     });
 
     const iconColorMap = {
-        'fernwärme': '#e51626',
+        'wärme': '#e51626',
         'wärme_strom': '#ff8c00',
-        'stromerzeugung': '#e1c200',
+        'strom': '#e1c200',
         'bau': '#025893',
-        'planung': '#60bf59',
-        'forschung': '#95338a',
-        'Hydrogeothermie': '#95338a'
+        'planung': '#178009',
+        'forschung': '#95338a'
     };
 
     const checkboxLabelMap = {
         'wärme_strom': 'Wärmebereitstellung und Stromerzeugung',
-        'fernwärme': 'Wärmebereitstellung',
-        'stromerzeugung': 'Stromerzeugung',
+        'wärme': 'Wärmebereitstellung',
+        'strom': 'Stromerzeugung',
         'bau': 'in Bau',
         'planung': 'in Planung',
-        'Forschung': 'Forschung',
-        'Hydrogeothermie':'Hydrogeothermie'
+        'forschung': 'Forschung',
     };
 
     // Slideshow implementation
     // TODO: change to load images dynamically
-    const startSlideshow = () => {
+    /*const startSlideshow = () => {
         const imageFolder = './images/';
         const imageList = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'image9.jpg', 'image10.jpg'];
         const imagesPerGroup = 5;
@@ -84,42 +82,82 @@
         updateSlideshow();
         setInterval(updateSlideshow, 5000);
     };
+    
+*/
+const overlapThreshold = 100; // Define the threshold for overlapping points in meters
 
+// Function to check if two points overlap
+const arePointsOverlapping = (point1, point2) => {
+    const lngLat1 = new maplibregl.LngLat(point1[0], point1[1]);
+    const lngLat2 = new maplibregl.LngLat(point2[0], point2[1]);
+    return lngLat1.distanceTo(lngLat2) < overlapThreshold;
+};
+
+// Function to highlight overlapping points
+const highlightOverlappingPoints = (point1, point2) => {
+    // Change the icon or add a border to indicate overlap
+    const highlightColor = '#FF0000'; // Red color for overlapping points
+
+    // You could change the icon color or add a border here based on the overlap
+    map.setPaintProperty('poi-' + point1.icon, 'circle-color', highlightColor);
+    map.setPaintProperty('poi-' + point2.icon, 'circle-color', highlightColor);
+};
     map.on('load', () => {
         loadPlaces();
         startSlideshow();
     });
-
+    let i = 0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('pr1.json');
+            const response = await fetch('anlagen_projektliste2.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
-
+            let points = [];
             places.features.forEach(feature => {
-                const useTypes = feature.properties.use;
-                console.log('Feature use:', feature.properties.use);
+                const useTypes = feature.properties.state;
+                console.log('Feature state:', feature.properties.state);
 
 
-                if (useTypes.includes("fernwärme") && useTypes.includes("stromerzeugung")) {
+                if (useTypes.includes("Wärme & Strom")) {
                     feature.properties.icon = "wärme_strom";
-                } else if (useTypes.includes("fernwärme")) {
-                    feature.properties.icon = "fernwärme";
-                } else if (useTypes.includes("stromerzeugung")) {
-                    feature.properties.icon = "stromerzeugung";
-                } else if (useTypes.includes("Forschung")) {
-                    feature.properties.icon = "Forschung";
-                } else if (useTypes.includes("bau")) {
+                    i +=1;
+                } else if (useTypes.includes("Wärme")) {
+                    feature.properties.icon = "wärme";
+                    i +=1;
+                } else if (useTypes.includes("Strom")) {
+                    feature.properties.icon = "strom";
+                    i +=1;
+                } else if (useTypes.includes("C_Forschungsprojekte ")) {
+                    feature.properties.icon = "forschung";
+                    i +=1;
+                } else if (useTypes.includes("B_Projekt in Bau")) {
                     feature.properties.icon = "bau";
-                } else if (useTypes.includes("planung")) {
+                    i +=1;
+                } else if (useTypes.includes("D_Projekt in Planung")) {
                     feature.properties.icon = "planung";
-                } else if (useTypes.includes("Hydrogeothermie")) {
-                    feature.properties.icon = "Hydrogeothermie";
-                } else {
-                    feature.properties.icon = useTypes[0].toLowerCase();
+                    i +=1;
                 }
+                points.push({
+                coordinates: feature.geometry.coordinates,
+                icon: feature.properties.icon,
+                title: feature.properties.title
             });
+            });
+             // Store the point coordinates and icon for checking overlap
+            
+              // Check for overlapping points
+            for (let i = 0; i < points.length; i++) {
+                for (let j = i + 1; j < points.length; j++) {
+                    const point1 = points[i];
+                    const point2 = points[j];
 
+                    if (arePointsOverlapping(point1.coordinates, point2.coordinates)) {
+                        console.log(`${point1.title};${point1.coordinates[1]} ${point1.coordinates[0]}; \n${point2.title}; ${point2.coordinates[1]} ${point2.coordinates[0]};`);
+                        //highlightOverlappingPoints(point1, point2);
+                    }
+                }
+            }
+            console.log('i:', i);
             map.addSource('places', {
                 'type': 'geojson',
                 'data': places
@@ -193,19 +231,19 @@
                     <br>
                     <ul>`;
 
-                if (details.Ptherm && details.Ptherm !== 'unavailable MW') {
+                if (details.Ptherm && details.Ptherm !== 'kein Eintrag') {
                     popupContent += `<li>Ptherm: ${details.Ptherm}</li>`;
                 }
-                if (details.Pel && details.Pel !== 'unavailable') {
+                if (details.Pel && details.Pel !== 'kein Eintrag') {
                     popupContent += `<li>Pel: ${details.Pel}</li>`;
                 }
-                if (details.Tmax && details.Tmax !== 'unavailable') {
+                if (details.Tmax && details.Tmax !== 'kein Eintrag') {
                     popupContent += `<li>Tmax: ${details.Tmax}</li>`;
                 }
-                if (details.Teufe && details.Teufe !== 'unavailable') {
+                if (details.Teufe && details.Teufe !== 'kein Eintrag') {
                     popupContent += `<li>Teufe: ${details.Teufe}</li>`;
                 }
-                if (details.Förderrate && details.Förderrate !== 'unavailable') {
+                if (details.Förderrate && details.Förderrate !== 'kein Eintrag') {
                     popupContent += `<li>Förderrate: ${details.Förderrate}</li>`;
                 }
                 if (details.Inbetriebnahme && details.Inbetriebnahme !== 'kein Eintrag') {

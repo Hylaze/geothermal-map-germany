@@ -22,7 +22,7 @@ def csv_to_geojson(input_csv, output_geojson):
             # Build the feature properties
             properties = {
                 "use": [row['Art der Nutzung']] if row['Art der Nutzung'] else [],
-                "state": row['Status'],
+                "state": row['Status'] if not row['Status'].startswith('A') else [row['Output']],
                 "title": row['Name'],
                 "attributes": [],
                 "details": {
@@ -53,6 +53,6 @@ def csv_to_geojson(input_csv, output_geojson):
         json.dump(geojson_data, geojsonfile, ensure_ascii=False, indent=4)
 
 # Example usage:
-input_csv = 'projektliste1.csv'  # Replace with your input CSV file path
-output_geojson = 'anlagen_projektliste1.geojson'  # Replace with your desired GeoJSON output file path
+input_csv = 'projektliste_dw2.csv'  # Replace with your input CSV file path
+output_geojson = 'anlagen_projektliste2.json'  # Replace with your desired GeoJSON output file path
 csv_to_geojson(input_csv, output_geojson)
