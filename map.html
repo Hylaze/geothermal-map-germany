@@ -162,7 +162,7 @@ const planningCategories = ['planung', 'bau', 'forschung'];
     let wärme_count=0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen_neu.json');
+            const response = await fetch('anlagen_final3.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
             places.features.forEach(feature => {
