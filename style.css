@@ -1,4 +1,3 @@
-
 html, body, #map {
   height: 100%; /* Full height */
   width: 100%;  /* Full width */
@@ -8,6 +7,20 @@ body {
   color: #333333; /* Dark grey color */
   margin: 0 auto; 
   padding: 0;
+}
+h2 {
+  color: #00b3d2;
+  margin: 10; 
+  padding: 10;
+}
+h3 {
+  color: #025893;
+}
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 @media (max-width: 768px) {
   .filter-group {
@@ -33,10 +46,10 @@ body {
   font-weight: normal;
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   z-index: 1;
   border-radius: 3px;
-  width: 180px; /* Increase width for better layout */
+  width: 206px; /* Increase width for better layout */
   background: rgb(255, 255, 255); /* Semi-transparent background */
   padding: 10px; /* Padding for better spacing */
 }
@@ -84,11 +97,22 @@ body {
 
 /* Style the label */
 .filter-group label {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center items vertically */
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start;  /* Ensures spacing between text and count */
+  width: 100%; /* Ensures the label takes full width */
   cursor: pointer;
   padding: 10px;
-  transition: background-color 0.3s; /* Smooth background color transition */
+  transition: background-color 0.3s;
+  position: relative;
+  flex-wrap: wrap; 
+}
+.count-display {
+  margin-left: 5px; /* Space between text and count */
+  font-size: 12px;
+  color: rgb(95, 95, 95);
+  flex-shrink: 0; /* Prevent the count from shrinking */
+  margin-top: 5px; /* Adjust the top margin to ensure proper alignment when wrapped */
 }
 
 /* Change font weight for checked labels */
@@ -105,12 +129,12 @@ body {
   margin-right: 8px; /* Space between circle and label text */
   vertical-align: middle; /* Aligns it nicely with text */
   position: absolute; /* Absolute positioning */
-  right: 10px; /* Align to the right of the filter group */
+  right: 20px; /* Align to the right of the filter group */
 }
 
 .maplibregl-popup {
   max-width: 400px;
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 14px/20px 'Titillium Web', sans-serif;
 }
 @media (max-width: 768px) {
   .custom-checkbox {
@@ -123,18 +147,7 @@ body {
       padding: 8px;  /* Reduce padding to make labels fit better */
   }
 }
-.maplibregl-popup {
-  max-width: 90%; /* Make popups smaller on mobile */
-  font-size: 14px; /* Slightly larger font for better readability */
-  line-height: 1.4;
-}
 
-@media (max-width: 768px) {
-  .maplibregl-popup {
-      max-width: 95%; /* Max width of popup on small screens */
-      font-size: 13px; /* Adjust font size for mobile */
-  }
-}
 
 html, body, #map {
     height: 100%; /* Full height */
@@ -164,7 +177,7 @@ body {
     }
 
     #map {
-        height: 50vh; /* Set map height to 50% of the viewport height */
+        height: 100vh; /* Set map height to 50% of the viewport height */
     }
 }
 
@@ -181,19 +194,10 @@ body {
     }
 }
 
-.maplibregl-popup {
-    max-width: 90%; /* Make popups smaller on mobile */
-    font-size: 14px; /* Slightly larger font for better readability */
-    line-height: 1.4;
+.Umbruch::after {
+  content: '\A';
+  white-space: pre;    
 }
-
-@media (max-width: 768px) {
-    .maplibregl-popup {
-        max-width: 95%; /* Max width of popup on small screens */
-        font-size: 13px; /* Adjust font size for mobile */
-    }
-}
-
 #toggle-filters {
   display: block;
   margin: 10px 0;
@@ -211,23 +215,106 @@ body {
         padding: 10px;
     }
     #filters-content {
-        display: none;
+        display: block;
     }
 }
 #slideshow {
-  position: absolute;
-  top: 80px;
-  left: 10px;
-  width: 150px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Use the full width of the screen */
   display: flex;
-  flex-direction: column; /* Stack images vertically */
-  gap: 10px; /* Space between images */
-  z-index: 1000;
+  justify-content: center; /* Center the logos */
+  align-items: center; /* Align them properly */
+  gap: 40px; /* Space between images */
+  padding: 10px 0; /* Add some padding to prevent cutting off */
+  z-index: 800;
+  background-color: white;
 }
 
 .slideshow-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: opacity 1s ease-in-out; /* Smooth fade effect */
+  max-height: 45px; /* Adjust height to ensure they fit */
+  width: auto; /* Keep aspect ratio */
+  object-fit: contain; /* Prevent cropping */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-in {
+  opacity: 1;
+}
+
+
+
+.maplibregl-popup {
+  max-width: 400px;
+/* Adjust padding to reduce extra space */
+
+}
+
+.popup-default .maplibregl-popup-content {
+    background-color: white; /* White background */
+}
+
+.maplibregl-popup-content {
+  padding: 0px; /* Reduce padding inside the popup content */
+}
+
+
+.maplibregl-popup ul {
+  margin: 0; /* Remove unnecessary margin around the list */
+  padding-left:   10px; 
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 0px;/* Add horizontal padding for better alignment */
+  list-style-position: inside; /* Align bullets inside the popup border */
+  list-style-type: none;
+}
+
+.maplibregl-popup li {
+  margin-bottom: 4px; /* Space between list items */
+  font-size: 14px; /* Consistent font size for the list */
+}
+
+.popup-planning .maplibregl-popup-tip {
+  border-top-color: #4ba83b !important;
+  border-bottom-color: #4ba83b !important;
+}
+.popup-construction .maplibregl-popup-tip {
+  border-top-color: #025893!important;
+  border-bottom-color: #025893!important; /* Change the triangle color  */
+}
+.popup-research .maplibregl-popup-tip {
+
+  border-bottom-color: #95338a !important;; /* Change the triangle color  */
+}
+
+.popup-energy .maplibregl-popup-tip {
+  border-bottom-color: #ff8c00 !important; /* Change the triangle color  */
+}
+.popup-heat .maplibregl-popup-tip {
+  border-bottom-color: #e51626 !important; /* Change the triangle color  */
+}
+
+.popup-electricity .maplibregl-popup-tip {
+  border-bottom-color: #e1c200 !important; /* Change the triangle color  */
+}
+
+
+.maplibregl-popup-close-button {
+  position: absolute; /* Position the button at the top-right of the popup */
+  top: 5px; /* Adjust vertical alignment */
+  right: 5px; /* Adjust horizontal alignment */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove default border */
+  color: #ffffff; /* Match the title text color */
+  font-size: 16px; /* Slightly larger for better visibility */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 2px 5px; /* Small padding for a clean look */
+  line-height: 1; /* Align the button neatly */
+}
+
+.maplibregl-popup-close-button:hover {
+  color: #e0e0e0; /* Slightly lighter on hover */
+  background-color: rgba(0, 0, 0, 0.1); /* Add subtle hover effect */
+  border-radius: 50%; /* Optional: circular hover effect */
 }
