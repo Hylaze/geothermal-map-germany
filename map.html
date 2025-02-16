@@ -53,7 +53,7 @@
     };
 
     const checkboxLabelMap = {
-        'wärme_strom': 'Wärmebereitstellung und Stromerzeugung',
+        'wärme_strom': 'Wärme- und Stromerzeugung',
         'wärme': 'Wärmebereitstellung',
         'strom': 'Stromerzeugung',
         'bau': 'Anlagen in Bau',
@@ -73,6 +73,18 @@
 const startSlideshow = () => {
     const imageFolder = './Logos/';
     const imageList = [
+        'DMT.png',
+        'ESK.png',
+        'FAU.png',
+        'Fraunhofer.png',
+        'geotec_consult.png',
+        'Hartmann.png',
+        'Innargi.png',
+        'KCA.png',
+        'silenos.png',
+        'sirius.png',
+        'SONNTAG.png',
+        'UGS.png',
         '190815_Anger-Logo-blue.png',
         'Daldrup_Söhne.jpg',
         'DEW_Logo23_4c.png',
@@ -150,7 +162,7 @@ const planningCategories = ['planung', 'bau', 'forschung'];
     let wärme_count=0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen_projektliste3.json');
+            const response = await fetch('anlagen_neu.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
             places.features.forEach(feature => {
@@ -217,8 +229,7 @@ const planningCategories = ['planung', 'bau', 'forschung'];
             customCheckbox.className = 'custom-checkbox';
             label.appendChild(customCheckbox);
             label.appendChild(document.createTextNode(checkboxLabelMap[symbol]));
-               label.appendChild(document.createTextNode(' ')); 
-
+          
             const colorIndicator = document.createElement('span');
             colorIndicator.className = 'color-indicator';
             colorIndicator.style.backgroundColor = iconColorMap[symbol];
