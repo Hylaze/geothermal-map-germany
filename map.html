@@ -20,7 +20,7 @@
         <div id="filters-source">
             <hr>
             <span class="Umbruch">Datengrundlage:</span>
-            <span>Bundesverband Geothermie e.V. und www.geotis.de</span> </div>
+            <span>Bundesverband Geothermie e.V., Bergbauämter, Geologische Dienste sowie Staatsministerien der Bundesländer und www.geotis.de</span> </div>
             <button id="toggle-filters" class="toggle-button">Filter Ausblenden</button>
         </nav>
       
@@ -53,13 +53,20 @@
     };
 
     const checkboxLabelMap = {
-        'wärme_strom': 'Wärme- und Stromerzeugung',
-        'wärme': 'Wärmebereitstellung',
-        'strom': 'Stromerzeugung',
+        'wärme_strom': 'kombinierte Wärme- und Stromerzeugung',
+        'wärme': 'nur Wärmebereitstellung',
+        'strom': 'nur Stromerzeugung',
         'bau': 'Anlagen in Bau',
         'planung': 'Anlagen in Planung',
         'forschung': 'Forschungsanlagen',
     };
+    const useCaseSymbolMap = {
+        'Hydrogeothermie': 'hydrogeothermie.csv',
+        'Grubenwasser': 'grubenwasser.csv',
+        'Sonde': 'sonde.csv',
+        'Forschung': 'forschung.csv',
+        'Geschlossenes tiefengeothermisches System': 'gt_system.csv'
+    }
     let counts = {
     'wärme': 0,
     'wärme_strom': 0,
@@ -93,7 +100,6 @@ const startSlideshow = () => {
         'GFZ-Wortbildmarke-DE-Helmholtzdunkelblau_RGB.png',
         'HK_Vertical_Logo_QF_rgb_ohne_Weißraum.jpg',
         'LIAG-Logo_D_rgb.png',
-        'GeotIS2024_NEU.png',
         'logo_RED.png',
         'Logo_sirius_HighRes.jpg',
         'RWE_Logo-2019_Blue_sRGB.jpg',
@@ -162,7 +168,7 @@ const planningCategories = ['planung', 'bau', 'forschung'];
     let wärme_count=0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen_final3.json');
+            const response = await fetch('anlagen.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
             places.features.forEach(feature => {
@@ -270,8 +276,8 @@ label.appendChild(countContainer);
 
         Object.keys(iconColorMap).forEach((symbol) => {
             const layerID = `poi-${symbol}`;
-
-            map.on('mouseover', layerID, (e) => {
+            ['mouseover', 'click'].forEach(event => {
+            map.on(event, layerID, (e) => {
                 const features = map.queryRenderedFeatures(e.point, { layers: [layerID] });
                 if (!features.length || !features[0].properties.title) return;
 
@@ -341,6 +347,7 @@ label.appendChild(countContainer);
                     .setHTML(popupContent)
                     .addTo(map);
             });
+        });
 
             // Change cursor to pointer when hovering over the layer
             map.on('mouseenter', layerID, () => {
