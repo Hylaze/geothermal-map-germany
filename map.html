@@ -11,7 +11,8 @@
     <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
 </head>
 <body>
-<h2>Tiefe Geothermie in Deutschland 2025</h2>
+<h2 >Tiefe Geothermie in Deutschland <span class="überschrift-stand">(Stand Januar 2025)</span></h2>
+
 <div id="map">
 
     <nav id="filter-group" class="filter-group">
@@ -168,7 +169,7 @@ const planningCategories = ['planung', 'bau', 'forschung'];
     let wärme_count=0;
     const loadPlaces = async () => {
         try {
-            const response = await fetch('anlagen.json');
+            const response = await fetch('anlagen_04_03_edit_14.json');
             const places = await response.json();
             console.log('Loaded GeoJSON:', places);
             places.features.forEach(feature => {
@@ -364,6 +365,14 @@ label.appendChild(countContainer);
     }
 };
 
+
+  // Add zoom and rotation controls to the map.
+        map.addControl(new maplibregl.NavigationControl({
+            visualizePitch: false,
+            visualizeRoll: false,
+            showZoom: true,
+            showCompass: false
+        }));
 
 
 

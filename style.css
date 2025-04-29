@@ -10,8 +10,12 @@ body {
 }
 h2 {
   color: #00b3d2;
-  margin: 10; 
-  padding: 10;
+padding: 10px;
+margin: 10px;
+}
+.überschrift-stand {
+  font-size: 60%;
+  font-weight:normal
 }
 h3 {
   color: #025893;
@@ -273,7 +277,7 @@ body {
   align-items: center; /* Align them properly */
   gap: 20px; /* Space between images */
   padding: 10px 0; /* Add some padding to prevent cutting off */
-  z-index: 500;
+  z-index: 1;
   background-color: white;
 }
 
@@ -297,7 +301,7 @@ body {
       justify-content: center;
       align-items: center;
       gap: 5px; /* Reduce space between logos */
-      z-index: 500;
+      z-index: 1;
       background-color: white;
   }
 
@@ -384,4 +388,23 @@ body {
   color: #e0e0e0; /* Slightly lighter on hover */
   background-color: rgba(0, 0, 0, 0.1); /* Add subtle hover effect */
   border-radius: 50%; /* Optional: circular hover effect */
+}
+.filter-ctrl {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.filter-ctrl input[type='text'] {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  width: 180px;
 }
