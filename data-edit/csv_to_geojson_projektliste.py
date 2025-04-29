@@ -11,6 +11,7 @@ def csv_to_geojson(input_csv, output_geojson):
         reader = csv.DictReader(csvfile, delimiter=';')
 
         for row in reader:
+            print(row)
             # Extract coordinates and ensure they are valid
             try:
                 coords = row['Koordinaten'].split(',')
@@ -18,7 +19,7 @@ def csv_to_geojson(input_csv, output_geojson):
                 latitude = float(coords[0].strip())
             except (IndexError, ValueError):
                 continue  # Skip rows with invalid coordinates
-
+           
             # Build the feature properties
             properties = {
                 "use": [row['Art der Nutzung']] if row['Art der Nutzung'] else [],
@@ -53,6 +54,6 @@ def csv_to_geojson(input_csv, output_geojson):
         json.dump(geojson_data, geojsonfile, ensure_ascii=False, indent=4)
 
 # Example usage:
-input_csv = 'data-edit/projektliste_feb.csv'  # Replace with your input CSV file path
-output_geojson = 'anlagen_neu.json'  # Replace with your desired GeoJSON output file path
+input_csv = 'daten/anlagen_04_03_edit_18.CSV'  # Replace with your input CSV file path
+output_geojson = 'anlagen_04_03_edit_18.json'  # Replace with your desired GeoJSON output file path
 csv_to_geojson(input_csv, output_geojson)
