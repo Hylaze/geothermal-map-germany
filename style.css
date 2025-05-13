@@ -1,349 +1,151 @@
-html, body, #map {
-  height: 100%; /* Full height */
-  width: 100%;  /* Full width */
-}
-body {
-  font-family: 'Titillium Web', sans-serif;
-  color: #333333; /* Dark grey color */
-  margin: 0 auto; 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
   padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+}
+main {
+  flex: 1; /* Füllt den restlichen Platz */
+  position: relative;
+}
+#map {
+  width: 100%;
+  height: 100%;
 }
 h2 {
   color: #00b3d2;
-padding: 10px;
-margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
+
 .überschrift-stand {
   font-size: 60%;
-  font-weight:normal
+  font-weight: normal;
 }
+
 h3 {
   color: #025893;
 }
+
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
-@media (max-width: 768px) {
-  .slideshow-image {
-    max-width: 40px;
-    opacity: 1; /* Ensure full visibility */
-}
-  .filter-group {
-      position: relative; /* Use relative positioning for better flow on small screens */
-      top: auto;
-      right: auto;
-      width: 90%; /* Use full width on smaller screens */
-      padding: 10px 5px; /* Reduce padding to fit smaller screen */
-      font-size: 14px; /* Slightly larger font for readability */
-      z-index: 2; /* Ensure it's visible over the map */
-  }
 
-  .filter-group input[type='checkbox']:checked + label {
-      font-weight: normal; /* Avoid bold text on small screens */
-  }
-
-  #map {
-      height: 50vh; /* Set map height to 50% of the viewport height */
-  }
-}
 .filter-group {
   font: 12px/20px 'Titillium Web', sans-serif;
+  border-radius: 20px;
+  padding:0px;
   font-weight: normal;
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 1;
   border-radius: 3px;
-  width: 235px; /* Increase width for better layout */
-  background: rgb(255, 255, 255); /* Semi-transparent background */
-  padding: 10px; /* Padding for better spacing */
+  width: 270px;
+  background: #fff;
+
 }
 
 .filter-group input[type='checkbox'] {
-  display: none; /* Hide original checkbox */
+  display: none;
 }
 
-/* Style the custom checkbox */
 .custom-checkbox {
   display: inline-block;
-  width: 13px; /* Outer circle width */
-  height: 13px; /* Outer circle height */
-  border: 2px solid black; /* Black border */
-  position: relative; /* Position relative for inner circle */
-  cursor: pointer; /* Show pointer on hover */
-  transition: background-color 0.2s, border-color 0.2s; /* Smooth transition */
-  margin-right: 8px; /* Add space between checkbox and text */
+  width: 13px;
+  height: 13px;
+  border: 2px solid black;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  margin-right: 8px;
 }
 
-/* Show inner circle when checkbox is checked */
-.filter-group input[type='checkbox']:checked + label .custom-checkbox {
-  background-color: rgb(255, 255, 255); /* Inner circle color when checked */
-}
-
-/* Style the inner circle */
 .custom-checkbox:after {
   content: '';
   position: absolute;
-  width: 9px; /* Width of the inner circle */
-  height: 9px; /* Height of the inner circle */
-  background-color: rgb(0, 0, 0); /* Inner circle color */
-  left: 50%; /* Center it */
-  top: 50%; /* Center it */
-  transform: translate(-50%, -50%); /* Adjust position */
-  opacity: 0; /* Hide inner circle initially */
-  transition: opacity 0.2s; /* Smooth transition for inner circle */
+  width: 9px;
+  height: 9px;
+  background-color: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
-/* Show inner circle when checkbox is checked */
-.filter-group input[type='checkbox']:checked + label .custom-checkbox:after {
-  opacity: 1; /* Show inner circle */
+.filter-group input[type='checkbox']:checked + label .custom-checkbox {
+  background-color: white;
 }
 
-/* Style the label */
+.filter-group input[type='checkbox']:checked + label .custom-checkbox:after {
+  opacity: 1;
+}
+
 .filter-group label {
-  display:inline-block;
+  display: inline-block;
   align-content: center;
-  width: 85%; /* Ensures the label takes full width */
+  width: 85%;
   cursor: pointer;
   padding: 8px;
   padding-right: 40px;
 }
+
 .count-display {
-  margin-left: 5px; /* Space between text and count */
+  margin-left: 5px;
   font-size: 12px;
-  color: rgb(95, 95, 95);
-  flex-shrink: 0; /* Prevent the count from shrinking */
-  margin-top: 5px; /* Adjust the top margin to ensure proper alignment when wrapped */
+  color: #5f5f5f;
+  flex-shrink: 0;
+  margin-top: 5px;
 }
 
-/* Change font weight for checked labels */
 .filter-group input[type='checkbox']:checked + label {
-  font-weight: bold; /* Bold font for checked labels */
+  font-weight: bold;
 }
 
-/* Color indicator */
 .color-indicator {
-  display: inline-block; /* Allow it to be inline with text */
-  width: 10px; /* Circle width */
-  height: 10px; /* Circle height */
-  border-radius: 50%; /* Make it circular */
-  margin-right: 8px; /* Space between circle and label text */
-  vertical-align: middle; /* Aligns it nicely with text */
-  position: absolute; /* Absolute positioning */
-  right: 20px; /* Align to the right of the filter group */
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: absolute;
+  right: 20px;
 }
+
 
 .maplibregl-popup {
   max-width: 400px;
   font: 14px/20px 'Titillium Web', sans-serif;
 }
-@media (max-width: 768px) {
-  .custom-checkbox {
-      width: 16px; /* Slightly larger outer circle */
-      height: 16px; /* Larger area for touch targets */
-  }
 
-  .filter-group label {
-      font-size: 14px;  /* Larger font size for better readability */
-      padding: 8px;  /* Reduce padding to make labels fit better */
-  }
-}
-
-
-html, body, #map {
-    height: 100%; /* Full height */
-    width: 100%;  /* Full width */
-}
-body {
-    font-family: 'Titillium Web', sans-serif;
-    color: #333333; /* Dark grey color */
-    margin: 0 auto; 
-    padding: 0;
-}
-
-/*media filter group sizing */
-@media (max-width: 768px) {
-    .filter-group {
-        position: relative; /* Use relative positioning for better flow on small screens */
-        top: auto;
-        right: auto;
-        width: 100%; /* Use full width on smaller screens */
-        left: 0%;
-        padding: 5px 5px;/* Reduce padding to fit smaller screen */
-        font-size: 14px; /* Slightly larger font for readability */
-        z-index: 2; /* Ensure it's visible over the map */
-    }
-
-    .filter-group input[type='checkbox']:checked + label {
-        font-weight: normal; /* Avoid bold text on small screens */
-    }
-
-    #map {
-        height: 100vh; /* Set map height to 50% of the viewport height */
-    }
-    .filter-group label {
-      font-size: 14px;  /* Keep it readable */
-      padding: 20px 20px;  /* Add more left & right padding */
-      justify-content: space-between; /* Spread elements evenly */
-  }
-
-  .custom-checkbox {
-      width: 18px; /* Slightly bigger for touch targets */
-      height: 18px;
-      margin-right: 8px; /* More space between checkbox & text */
-  }
-
-  .color-indicator {
-      right: 30px; /* Adjust positioning to prevent overlap */
-  }
-}
-
-
-@media (max-width: 768px) {
-    .custom-checkbox {
-        width: 16px; /* Slightly larger outer circle */
-        height: 16px; /* Larger area for touch targets */
-    }
-
-    .filter-group label {
-        font-size: 14px;  /* Larger font size for better readability */
-        padding: 8px;  /* Reduce padding to make labels fit better */
-    }
-}
-
-.Umbruch::after {
-  content: '\A';
-  white-space: pre;    
-}
-#toggle-filters {
-  display: block;
-  margin: 10px 0;
-  background-color: #025893;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-}
-@media (max-width: 768px) {
-    #filter-group {
-        position: relative;
-        font-size: 14px;
-        padding: 10px;
-    }
-    #filters-content {
-        width: 95%;
-        display: block;
-    }
-    #filters-source {
-      width: 95%;
-      display: block;
-  }
-    
-}
-
-@media (max-width: 768px) {
-  #slideshow {
-      position: relative; /* Prevents overlap with other elements */
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      /* Allows logos to wrap instead of shrinking */
-      justify-content: center;
-      align-items: center;
-      gap: 5px; /* Reduce space between logos */
-      padding: 10px;
-      z-index: 500;
-      background-color: white;
-  }
-
-  .slideshow-image {
-      max-width: 40px;
-      opacity: 1; /* Ensure full visibility */
-  }
-}
-#slideshow {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Use the full width of the screen */
-  display: flex;
-  justify-content: center; /* Center the logos */
-  align-items: center; /* Align them properly */
-  gap: 20px; /* Space between images */
-  padding: 10px 0; /* Add some padding to prevent cutting off */
-  z-index: 1;
-  background-color: white;
-}
-
-.slideshow-image {
-  max-width: 100px;
-  max-height: 60px;
-  min-height: 60px; /* Adjust height to ensure they fit */
-  width: auto; /* Keep aspect ratio */
-  object-fit: contain; /* Prevent cropping */
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  #slideshow {
-      position: relative; /* Prevents overlap with other elements */
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px; /* Reduce space between logos */
-      z-index: 1;
-      background-color: white;
-  }
-
-  .slideshow-image {
-      max-width: 60px;
-      opacity: 1; /* Ensure full visibility */
-  }
-}
-.fade-in {
-  opacity: 1;
-}
-
-
-
-.maplibregl-popup {
-  max-width: 400px;
-/* Adjust padding to reduce extra space */
-
+.maplibregl-popup-content {
+  padding: 0;
 }
 
 .popup-default .maplibregl-popup-content {
-    background-color: white; /* White background */
+  background-color: white;
 }
-
-.maplibregl-popup-content {
-  padding: 0px; /* Reduce padding inside the popup content */
-}
-
 
 .maplibregl-popup ul {
-  margin: 0; /* Remove unnecessary margin around the list */
-  padding-left:   10px; 
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-top: 0px;/* Add horizontal padding for better alignment */
-  list-style-position: inside; /* Align bullets inside the popup border */
+  margin: 0;
+  padding: 0 10px 10px 10px;
+  list-style-position: inside;
   list-style-type: none;
 }
 
 .maplibregl-popup li {
-  margin-bottom: 4px; /* Space between list items */
-  font-size: 14px; /* Consistent font size for the list */
+  margin-bottom: 4px;
+  font-size: 14px;
 }
 
 .popup-planning .maplibregl-popup-tip {
@@ -351,60 +153,159 @@ body {
   border-bottom-color: #4ba83b !important;
 }
 .popup-construction .maplibregl-popup-tip {
-  border-top-color: #025893!important;
-  border-bottom-color: #025893!important; /* Change the triangle color  */
+  border-top-color: #025893 !important;
+  border-bottom-color: #025893 !important;
 }
 .popup-research .maplibregl-popup-tip {
-
-  border-bottom-color: #95338a !important;; /* Change the triangle color  */
+  border-bottom-color: #95338a !important;
 }
-
 .popup-energy .maplibregl-popup-tip {
-  border-bottom-color: #ff8c00 !important; /* Change the triangle color  */
+  border-bottom-color: #ff8c00 !important;
 }
 .popup-heat .maplibregl-popup-tip {
-  border-bottom-color: #e51626 !important; /* Change the triangle color  */
+  border-bottom-color: #e51626 !important;
 }
-
 .popup-electricity .maplibregl-popup-tip {
-  border-bottom-color: #e1c200 !important; /* Change the triangle color  */
+  border-bottom-color: #e1c200 !important;
 }
-
 
 .maplibregl-popup-close-button {
-  position: absolute; /* Position the button at the top-right of the popup */
-  top: 5px; /* Adjust vertical alignment */
-  right: 5px; /* Adjust horizontal alignment */
-  background-color: transparent; /* Transparent background */
-  border: none; /* Remove default border */
-  color: #ffffff; /* Match the title text color */
-  font-size: 16px; /* Slightly larger for better visibility */
-  cursor: pointer; /* Pointer cursor on hover */
-  padding: 2px 5px; /* Small padding for a clean look */
-  line-height: 1; /* Align the button neatly */
-}
-
-.maplibregl-popup-close-button:hover {
-  color: #e0e0e0; /* Slightly lighter on hover */
-  background-color: rgba(0, 0, 0, 0.1); /* Add subtle hover effect */
-  border-radius: 50%; /* Optional: circular hover effect */
-}
-.filter-ctrl {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 5px;
+  line-height: 1;
+}
+.maplibregl-popup-close-button:hover {
+  color: #e0e0e0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
-.filter-ctrl input[type='text'] {
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  width: 100%;
-  border: 0;
-  background-color: #fff;
-  margin: 0;
-  color: rgba(0, 0, 0, 0.5);
+.Umbruch::after {
+  content: '\A';
+  white-space: pre;
+}
+
+#toggle-filters {
+  border-top-left-radius: 4px;  /* Rounded top-left corner */
+    border-top-right-radius: 4px;
+  background-color: #025893;
+  color: white;
   padding: 10px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  width: 180px;
+  border: 10px;
+  width: 100%;  /* Button nimmt volle Breite des Containers ein */
+  cursor: pointer;
+  font-size: 14px;
+}
+.arrow-line {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translateY(2px)rotate(-135deg); /* zeigt nach unten rechts */
+  margin-left: 10px;
+}
+
+#toggle-filters.open .arrow-line {
+  transform: translateY(-2px)rotate(45deg); /* zeigt nach oben */
+}
+
+#slideshow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.slideshow-image {
+  max-width: 100px;
+  max-height: 60px;
+  min-height: 60px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    padding: 15px;
+    margin: 0px;
+    text-align: center;       
+    font-size: 16px;
+  }
+  
+  .überschrift-stand {
+    font-size: 16px;
+  }
+  .maplibregl-ctrl-top-right {
+    top: 50px; /* move down from top */
+   
+  }
+  #toggle-filters {
+    border-top-left-radius: 0px;  /* Rounded top-left corner */
+      border-top-right-radius: 0px;
+  }
+  .filter-group {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: 14px;
+    z-index: 3;
+  }
+
+  .filter-group label {
+    font-size: 14px;
+    padding: 6px 10px;
+    justify-content: space-between;
+  }
+
+  .filter-group input[type='checkbox']:checked + label {
+    font-weight: normal;
+  }
+
+  .custom-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .color-indicator {
+    right: 30px;
+  }
+
+  #slideshow {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    gap: 5px;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .slideshow-image {
+    max-width: 60px;
+    opacity: 1;
+  }
+
 }

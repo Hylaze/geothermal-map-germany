@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Geothermieanlagen in Deutschland</title>
     <meta property="og:description" content="Übersichtskarte der Geothermieanlagen in Deutschland" />
@@ -10,363 +11,360 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
     <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
 </head>
+
 <body>
-<h2 >Tiefe Geothermie in Deutschland <span class="überschrift-stand">(Stand Januar 2025)</span></h2>
+    <h2>Tiefe Geothermie in Deutschland <span class="überschrift-stand">(Stand Januar 2025)</span></h2>
+    <main>
+    <div id="map">
 
-<div id="map">
-
-    <nav id="filter-group" class="filter-group">
-        <h3>Filter nach Art der Anlage (Anzahl)</h3>
-        <div id="filters-content"> </div>
-        <div id="filters-source">
-            <hr>
-            <span class="Umbruch">Datengrundlage:</span>
-            <span>Bundesverband Geothermie e.V., Bergbauämter, Geologische Dienste sowie Staatsministerien der Bundesländer und www.geotis.de</span> </div>
-            <button id="toggle-filters" class="toggle-button">Filter Ausblenden</button>
+        <nav id="filter-group" class="filter-group">
+            <button id="toggle-filters" class="toggle-button">Filter nach Art der Anlage (Anzahl) <span class="arrow-line"></span></button>
+            <div id="filter-content" class="filter-content"style="padding:10px;"></div>
+            <div id="filter-source" style="padding:10px;">
+                <hr>
+                <span class="Umbruch" >Datengrundlage:</span>
+                <span>Bundesverband Geothermie e.V., Bergbauämter, Geologische Dienste sowie Staatsministerien der
+                    Bundesländer und www.geotis.de</span>
+            </div>
+           
         </nav>
-      
-      
-</div>
-<!-- Slideshow container -->
-<div id="slideshow"></div>
-<script>
-     const filterGroup = document.getElementById('filter-group');
-    const toggleButton = document.getElementById('toggle-filters');
-    const filtersContent = document.getElementById('filters-content');
-    const filtersSource = document.getElementById('filters-source');
-    const slideshow = document.getElementById('slideshow');
-    
-    const map = new maplibregl.Map({
-        container: 'map',
-        style: 'style.json',
-        center: [10.00, 51.50],
-        zoom: 3, 
-        maxBounds: [[4.0, 46.0], [17.0, 56.0]] 
-    });
-
-    const iconColorMap = {
-        'wärme': '#e41929',
-        'wärme_strom': '#ff8c00',
-        'strom': '#e1c200',
-        'bau': '#025893',
-        'planung': '#4ba83b',
-        'forschung': '#95338a'
-    };
-
-    const checkboxLabelMap = {
-        'wärme_strom': 'kombinierte Wärme- und Stromerzeugung',
-        'wärme': 'nur Wärmebereitstellung',
-        'strom': 'nur Stromerzeugung',
-        'bau': 'Anlagen in Bau',
-        'planung': 'Anlagen in Planung',
-        'forschung': 'Forschungsanlagen',
-    };
-    const useCaseSymbolMap = {
-        'Hydrogeothermie': 'hydrogeothermie.csv',
-        'Grubenwasser': 'grubenwasser.csv',
-        'Sonde': 'sonde.csv',
-        'Forschung': 'forschung.csv',
-        'Geschlossenes tiefengeothermisches System': 'gt_system.csv'
-    }
-    let counts = {
-    'wärme': 0,
-    'wärme_strom': 0,
-    'strom': 0,
-    'bau': 0,
-    'planung': 0,
-    'forschung': 0
-};
-
-  
-const startSlideshow = () => {
-    const imageFolder = './Logos/';
-    const imageList = [
-        'DMT.png',
-        'ESK.png',
-        'FAU.png',
-        'Fraunhofer.png',
-        'geotec_consult.png',
-        'Hartmann.png',
-        'Innargi.png',
-        'KCA.png',
-        'silenos.png',
-        'sirius.png',
-        'SONNTAG.png',
-        'UGS.png',
-        '190815_Anger-Logo-blue.png',
-        'Daldrup_Söhne.jpg',
-        'DEW_Logo23_4c.png',
-        'Fangmann_ENergy_Services.png',
-        'FINAL_INT_SHS_Campaign_GTN_GDC0021585_ruvo4.png',
-        'GFZ-Wortbildmarke-DE-Helmholtzdunkelblau_RGB.png',
-        'HK_Vertical_Logo_QF_rgb_ohne_Weißraum.jpg',
-        'LIAG-Logo_D_rgb.png',
-        'logo_RED.png',
-        'Logo_sirius_HighRes.jpg',
-        'RWE_Logo-2019_Blue_sRGB.jpg',
-        'SLB_Logo_Positive_RGB_TM.png',
-        'Tranter_Warmetauscher_cmyk.png',
-        'Vulcan-Energy-Stacked-Colour.png',
-    ];
-
-    const imagesPerGroup = 5;
-    let currentIndex = 0;
-
-    const updateSlideshow = () => {
-        const images = document.querySelectorAll('.slideshow-image');
-        
-        // Fade out current images
-        images.forEach(img => img.style.opacity = 0);
-
-        setTimeout(() => {
-            slideshow.innerHTML = ''; // Clear slideshow after fade-out
-
-            for (let i = 0; i < imagesPerGroup; i++) {
-                const imgIndex = (currentIndex + i) % imageList.length;
-                const img = document.createElement('img');
-                img.src = `${imageFolder}${imageList[imgIndex]}`;
-                img.alt = `Slideshow image ${imgIndex + 1}`;
-                img.className = 'slideshow-image fade-in'; // Add fade-in class
-                slideshow.appendChild(img);
-            }
-
-            currentIndex = (currentIndex + imagesPerGroup) % imageList.length;
-        }, 500); // Delay to match fade-out transition
-    };
-
-    // Initial call & interval
-    updateSlideshow();
-    setInterval(updateSlideshow, 8000);
-};
-
-const line = document.createElement('hr');
-    // Create filter containers
-const filtersInOperation = document.createElement('div');
-filtersInOperation.className = 'filter-category';
-
-const filtersPlanned = document.createElement('div');
-filtersPlanned.className = 'filter-category';
-
-// Add section titles
-const operationTitle = document.createElement('div');
-operationTitle.textContent = "Anlagen in Betrieb:";
-filtersInOperation.appendChild(operationTitle);
- // Create the horizontal line
-
-// Assuming filtersPlanned is already define
-filtersPlanned.appendChild(line); // Append the line
-
-// Define category groups
-const operationCategories = ['wärme', 'strom', 'wärme_strom'];
-const planningCategories = ['planung', 'bau', 'forschung'];
-
-    map.on('load', () => {
-        startSlideshow();
-        loadPlaces().then(updateWärmeCount);
-       
-    });
-    let i = 0;
-    let wärme_count=0;
-    const loadPlaces = async () => {
-        try {
-            const response = await fetch('anlagen_04_03_edit_14.json');
-            const places = await response.json();
-            console.log('Loaded GeoJSON:', places);
-            places.features.forEach(feature => {
-                const useTypes = feature.properties.state;
-                console.log('Feature state:', feature.properties.state);
-                if (useTypes.includes("Wärme & Strom")) {
-                feature.properties.icon = "wärme_strom";
-                counts['wärme_strom'] += 1;
-            } else if (useTypes.includes("Wärme")) {
-                feature.properties.icon = "wärme";
-                counts['wärme'] += 1;
-            } else if (useTypes.includes("Strom")) {
-                feature.properties.icon = "strom";
-                counts['strom'] += 1;
-            } else if (useTypes.includes("C_Forschungsprojekte ")) {
-                feature.properties.icon = "forschung";
-                counts['forschung'] += 1;
-            } else if (useTypes.includes("B_Projekt in Bau")) {
-                feature.properties.icon = "bau";
-                counts['bau'] += 1;
-            } else if (useTypes.includes("D_Projekt in Planung")) {
-                feature.properties.icon = "planung";
-                counts['planung'] += 1;
-            }
-            });
-        // Add the GeoJSON source
-            map.addSource('places', {
-                        type: 'geojson',
-                        data: places
-                    });
-
-        // Now, add the layers for each category
-        Object.keys(iconColorMap).forEach((symbol) => {
-            const layerID = `poi-${symbol}`;
-
-            // Add layer only after the source is loaded
-            map.addLayer({
-                'id': layerID,
-                'type': 'circle',
-                'source': 'places',
-                'paint': {
-                    'circle-color': iconColorMap[symbol],
-                    'circle-radius': [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        5, 4,
-                        10, 12
-                    ],
-                    'circle-opacity': 0.85
-                },
-                'filter': ['==', ['get', 'icon'], symbol]
-            });
-
-            // Create the checkbox
-            const input = document.createElement('input');
-            input.type = 'checkbox';
-            input.id = layerID;
-            input.checked = true;
-
-            const label = document.createElement('label');
-            label.setAttribute('for', layerID);
-            const customCheckbox = document.createElement('span');
-            customCheckbox.className = 'custom-checkbox';
-            label.appendChild(customCheckbox);
-            label.appendChild(document.createTextNode(checkboxLabelMap[symbol]));
-          
-            const colorIndicator = document.createElement('span');
-            colorIndicator.className = 'color-indicator';
-            colorIndicator.style.backgroundColor = iconColorMap[symbol];
-            label.appendChild(colorIndicator);
-// Create a container span for better spacing
-const countContainer = document.createElement('span');
-countContainer.style.marginLeft = "8px"; // Adjust spacing to avoid overlap
-
-// Create the count text
-const countDisplay = document.createElement('span');
-countDisplay.textContent = `(${counts[symbol]})`; 
-countContainer.appendChild(countDisplay);
-
-// Append the count container to the label
-label.appendChild(countContainer);
-
-            if (operationCategories.includes(symbol)) {
-                filtersInOperation.appendChild(input);
-                filtersInOperation.appendChild(label);
-            } else if (planningCategories.includes(symbol)) {
-                filtersPlanned.appendChild(input);
-                filtersPlanned.appendChild(label);
-            }
-                input.addEventListener('change', (e) => {
-                    map.setLayoutProperty(
-                        layerID,
-                        'visibility',
-                        e.target.checked ? 'visible' : 'none'
-                    );
-                });
-                  // Append filters to the menu
-        filtersContent.appendChild(filtersInOperation);
-        filtersContent.appendChild(filtersPlanned);
-            });
-            
-            let currentPopup = null; // Store reference to the currently open popup
 
 
-        Object.keys(iconColorMap).forEach((symbol) => {
-            const layerID = `poi-${symbol}`;
-            ['mouseover', 'click'].forEach(event => {
-            map.on(event, layerID, (e) => {
-                const features = map.queryRenderedFeatures(e.point, { layers: [layerID] });
-                if (!features.length || !features[0].properties.title) return;
+    </div>
+    <!-- Slideshow container -->
+    <div id="slideshow"></div>
+    <script>
+        const filterGroup = document.getElementById('filter-group');
+        const toggleButton = document.getElementById('toggle-filters');
+        const filtersContent = document.getElementById('filter-content');
+        const filtersSource = document.getElementById('filter-source');
+        const slideshow = document.getElementById('slideshow');
 
-                const feature = features[0];
-                const coordinates = feature.geometry.coordinates.slice();
-                const title = feature.properties.title;
-                const details = JSON.parse(feature.properties.details);
-                const markerColor = iconColorMap[feature.properties.icon] || '#ffffff';
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: 'style.json',
+            center: [10.00, 51.50],
+            zoom: 3,
+            maxBounds: [[-8.0, 45.0], [28.0, 57.0]]
+        });
 
-                // Construct popup content
-                let popupContent = `
-                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
-                        <strong>${title}</strong>
-                    </div>
-                `;
+        const iconColorMap = {
+            'wärme': '#e41929',
+            'wärme_strom': '#ff8c00',
+            'strom': '#e1c200',
+            'bau': '#025893',
+            'planung': '#4ba83b',
+            'forschung': '#95338a'
+        };
 
-                if (feature.properties.state !== "D_Projekt in Planung") {
-                    const detailKeys = ['Ptherm', 'Pel', 'Tmax', 'Teufe', 'Förderrate', 'Inbetriebnahme'];
-                    let allDetailsEmpty = true; 
-                    popupContent += `<br><ul>`;
-                    detailKeys.forEach(key => {
-                        if (details[key] && details[key] !== 'kein Eintrag') {
-                            allDetailsEmpty = false;
-                            if(key == 'Ptherm') {
-                                popupContent += `<li>P<sub>therm</sub>: ${details[key]}</li>`;
-                            }else if(key == 'Pel') {
-                                popupContent += `<li>P<sub>el</sub>: ${details[key]}</li>`;
-                            }else  if(key == 'Tmax') {
-                                popupContent += `<li>T<sub>max</sub>: ${details[key]}</li>`;
-                            }else {
-                                popupContent += `<li>${key}: ${details[key]}</li>`;
-                            }
-                        }
-                    });
-                    popupContent += `</ul>`;
-                    if (allDetailsEmpty) {
-                         popupContent = `
-                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
-                        <strong>${title}</strong>
-                    </div>
-                `;
+        const checkboxLabelMap = {
+            'wärme_strom': 'kombinierte Wärme- und Stromerzeugung',
+            'wärme': 'nur Wärmebereitstellung',
+            'strom': 'nur Stromerzeugung',
+            'bau': 'Anlagen in Bau',
+            'planung': 'Anlagen in Planung',
+            'forschung': 'Forschungsanlagen',
+        };
+        const useCaseSymbolMap = {
+            'Hydrogeothermie': 'hydrogeothermie.csv',
+            'Grubenwasser': 'grubenwasser.csv',
+            'Sonde': 'sonde.csv',
+            'Forschung': 'forschung.csv',
+            'Geschlossenes tiefengeothermisches System': 'gt_system.csv'
+        }
+        let counts = {
+            'wärme': 0,
+            'wärme_strom': 0,
+            'strom': 0,
+            'bau': 0,
+            'planung': 0,
+            'forschung': 0
+        };
+
+
+        const startSlideshow = () => {
+            const imageFolder = './Logos/';
+            const imageList = [
+                'DMT.png',
+                'ESK.png',
+                'FAU.png',
+                'Fraunhofer.png',
+                'geotec_consult.png',
+                'Hartmann.png',
+                'Innargi.png',
+                'KCA.png',
+                'silenos.png',
+                'sirius.png',
+                'SONNTAG.png',
+                'UGS.png',
+                '190815_Anger-Logo-blue.png',
+                'Daldrup_Söhne.jpg',
+                'DEW_Logo23_4c.png',
+                'Fangmann_ENergy_Services.png',
+                'FINAL_INT_SHS_Campaign_GTN_GDC0021585_ruvo4.png',
+                'GFZ-Wortbildmarke-DE-Helmholtzdunkelblau_RGB.png',
+                'HK_Vertical_Logo_QF_rgb_ohne_Weißraum.jpg',
+                'LIAG-Logo_D_rgb.png',
+                'logo_RED.png',
+                'Logo_sirius_HighRes.jpg',
+                'RWE_Logo-2019_Blue_sRGB.jpg',
+                'SLB_Logo_Positive_RGB_TM.png',
+                'Tranter_Warmetauscher_cmyk.png',
+                'Vulcan-Energy-Stacked-Colour.png',
+            ];
+
+            const imagesPerGroup = 5;
+            let currentIndex = 0;
+
+            const updateSlideshow = () => {
+                const images = document.querySelectorAll('.slideshow-image');
+
+                // Fade out current images
+                images.forEach(img => img.style.opacity = 0);
+
+                setTimeout(() => {
+                    slideshow.innerHTML = ''; // Clear slideshow after fade-out
+
+                    for (let i = 0; i < imagesPerGroup; i++) {
+                        const imgIndex = (currentIndex + i) % imageList.length;
+                        const img = document.createElement('img');
+                        img.src = `${imageFolder}${imageList[imgIndex]}`;
+                        img.alt = `Slideshow image ${imgIndex + 1}`;
+                        img.className = 'slideshow-image fade-in'; // Add fade-in class
+                        slideshow.appendChild(img);
                     }
-                }
 
-                // Close the previously opened popup if there is one
-                if (currentPopup) {
-                    currentPopup.remove();
-                }
-                let popupClass = ""; 
+                    currentIndex = (currentIndex + imagesPerGroup) % imageList.length;
+                }, 500); // Delay to match fade-out transition
+            };
 
-                if (feature.properties.state.includes("D_Projekt in Planung")) {
-                    popupClass = "popup-planning";
-                } else if (feature.properties.state.includes("B_Projekt in Bau")) {
-                    popupClass = "popup-construction";
-                } else if (feature.properties.state.includes("C_Forschungsprojekte")) {
-                    popupClass = "popup-research";
-                } else if (feature.properties.state.includes("Wärme & Strom")) {
-                    popupClass = "popup-energy";
-                } else if (feature.properties.state.includes("Wärme")) {
-                    popupClass = "popup-heat";
-                } else if (feature.properties.state.includes("Strom")) {
-                    popupClass = "popup-electricity";
-                }
-                // Create a new popup with the generated content
-                currentPopup = new maplibregl.Popup({ className: popupClass})
-                    .setLngLat(coordinates)
-                    .setHTML(popupContent)
-                    .addTo(map);
-            });
+            // Initial call & interval
+            updateSlideshow();
+            setInterval(updateSlideshow, 8000);
+        };
+
+        const filtersInOperation = document.createElement('div');
+        filtersInOperation.className = 'filter-category';
+
+        const filtersPlanned = document.createElement('div');
+        filtersPlanned.className = 'filter-category';
+
+        const operationTitle = document.createElement('div');
+        operationTitle.textContent = "Anlagen in Betrieb:";
+        filtersInOperation.appendChild(operationTitle);
+
+        const line = document.createElement('hr');
+        filtersPlanned.appendChild(line);
+
+        const operationCategories = ['wärme', 'strom', 'wärme_strom'];
+        const planningCategories = ['planung', 'bau', 'forschung'];
+
+        map.on('load', () => {
+            startSlideshow();
+            loadPlaces().then(updateWärmeCount);
         });
+        
+        const loadPlaces = async () => {
+            try {
+                const response = await fetch('anlagen_neu_4.json');
+                const places = await response.json();
+                console.log(places.features);
+                places.features.forEach(feature => {
+                    const useTypes = feature.properties.state;
 
-            // Change cursor to pointer when hovering over the layer
-            map.on('mouseenter', layerID, () => {
-                map.getCanvas().style.cursor = 'pointer';
-            });
+                    if (useTypes.includes("Wärme & Strom")) {
+                        feature.properties.icon = "wärme_strom";
+                        counts['wärme_strom'] += 1;
+                    } else if (useTypes.includes("Wärme")) {
+                        feature.properties.icon = "wärme";
+                        counts['wärme'] += 1;
+                    } else if (useTypes.includes("Strom")) {
+                        feature.properties.icon = "strom";
+                        counts['strom'] += 1;
+                    } else if (useTypes.includes("C_Forschungsprojekte ")) {
+                        feature.properties.icon = "forschung";
+                        counts['forschung'] += 1;
+                    } else if (useTypes.includes("B_Projekt in Bau")) {
+                        feature.properties.icon = "bau";
+                        counts['bau'] += 1;
+                    } else if (useTypes.includes("D_Projekt in Planung")) {
+                        feature.properties.icon = "planung";
+                        counts['planung'] += 1;
+                    }
+                });
+                map.addSource('places', {
+                    type: 'geojson',
+                    data: places
+                });
 
-            // Reset cursor when leaving the layer
-            map.on('mouseleave', layerID, () => {
-                map.getCanvas().style.cursor = '';
-            });
-        });
-    } catch (error) {
-        console.error('Error loading places data:', error);
-    }
-};
+                Object.keys(iconColorMap).forEach((symbol) => {
+                    const layerID = `poi-${symbol}`;
+
+                    map.addLayer({
+                        'id': layerID,
+                        'type': 'circle',
+                        'source': 'places',
+                        'paint': {
+                            'circle-color': iconColorMap[symbol],
+                            'circle-radius': [
+                                'interpolate',
+                                ['linear'],
+                                ['zoom'],
+                                5, 4,
+                                10, 12
+                            ],
+                            'circle-opacity': 0.85
+                        },
+                        'filter': ['==', ['get', 'icon'], symbol]
+                    });
+
+                    const input = document.createElement('input');
+                    input.type = 'checkbox';
+                    input.id = layerID;
+                    input.checked = true;
+
+                    const label = document.createElement('label');
+                    label.setAttribute('for', layerID);
+                    const customCheckbox = document.createElement('span');
+                    customCheckbox.className = 'custom-checkbox';
+                    label.appendChild(customCheckbox);
+                    label.appendChild(document.createTextNode(checkboxLabelMap[symbol]));
+
+                    const colorIndicator = document.createElement('span');
+                    colorIndicator.className = 'color-indicator';
+                    colorIndicator.style.backgroundColor = iconColorMap[symbol];
+                    label.appendChild(colorIndicator);
+
+                    // container span for better spacing
+                    const countContainer = document.createElement('span');
+                    countContainer.style.marginLeft = "8px"; 
+
+                    // count text
+                    const countDisplay = document.createElement('span');
+                    countDisplay.textContent = `(${counts[symbol]})`;
+                    countContainer.appendChild(countDisplay);
+
+                    label.appendChild(countContainer);
+
+                    if (operationCategories.includes(symbol)) {
+                        filtersInOperation.appendChild(input);
+                        filtersInOperation.appendChild(label);
+                    } else if (planningCategories.includes(symbol)) {
+                        filtersPlanned.appendChild(input);
+                        filtersPlanned.appendChild(label);
+                    }
+                    input.addEventListener('change', (e) => {
+                        map.setLayoutProperty(
+                            layerID,
+                            'visibility',
+                            e.target.checked ? 'visible' : 'none'
+                        );
+                    });
+
+                });
+                // Append filters to the menu
+                filtersContent.appendChild(filtersInOperation);
+                filtersContent.appendChild(filtersPlanned);
+                let currentPopup = null; 
 
 
-  // Add zoom and rotation controls to the map.
+                Object.keys(iconColorMap).forEach((symbol) => {
+                    const layerID = `poi-${symbol}`;
+                    ['mouseover', 'click'].forEach(event => {
+                        map.on(event, layerID, (e) => {
+                            const features = map.queryRenderedFeatures(e.point, { layers: [layerID] });
+                            if (!features.length || !features[0].properties.title) return;
+
+                            const feature = features[0];
+                            const coordinates = feature.geometry.coordinates.slice();
+                            const title = feature.properties.title;
+                            const details = JSON.parse(feature.properties.details);
+                            const markerColor = iconColorMap[feature.properties.icon] || '#ffffff';
+
+                            // Construct popup content
+                            let popupContent = `
+                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
+                        <strong>${title}</strong>
+                    </div>
+                `;
+
+                            if (feature.properties.state !== "D_Projekt in Planung") {
+                                const detailKeys = ['Ptherm', 'Pel', 'Tmax', 'Teufe', 'Förderrate', 'Inbetriebnahme', 'Link zum Lexikon'];
+                                let allDetailsEmpty = true;
+                                popupContent += `<br><ul>`;
+                                detailKeys.forEach(key => {
+                                    if (details[key] && details[key] !== 'kein Eintrag') {
+                                        allDetailsEmpty = false;
+                                        if (key == 'Ptherm') {
+                                            popupContent += `<li>P<sub>therm</sub>: ${details[key]}</li>`;
+                                        } else if (key == 'Pel') {
+                                            popupContent += `<li>P<sub>el</sub>: ${details[key]}</li>`;
+                                        } else if (key == 'Tmax') {
+                                            popupContent += `<li>T<sub>max</sub>: ${details[key]}</li>`;
+                                        } else if (key == 'Link zum Lexikon') {
+                                            console.log(details[key])
+                                            popupContent += `<li><a href=${details[key].split(";")[0]} target="_blank">Link zum Lexikon</a></li>`;
+                                            if(details[key].split(";")[1]){
+                                            popupContent += `<li><a href=${details[key].split(";")[1]} target="_blank">Link zum Lexikon</a></li>`;}
+                                        } else {
+                                            popupContent += `<li>${key}: ${details[key]}</li>`;
+                                        }
+                                    }
+                                });
+                                popupContent += `</ul>`;
+                                if (allDetailsEmpty) {
+                                    popupContent = `
+                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
+                        <strong>${title}</strong>
+                    </div>
+                `;
+                                }
+                            }
+
+                            // Close the previously opened popup if there is one
+                            if (currentPopup) {
+                                currentPopup.remove();
+                            }
+                            let popupClass = "";
+
+                            if (feature.properties.state.includes("D_Projekt in Planung")) {
+                                popupClass = "popup-planning";
+                            } else if (feature.properties.state.includes("B_Projekt in Bau")) {
+                                popupClass = "popup-construction";
+                            } else if (feature.properties.state.includes("C_Forschungsprojekte")) {
+                                popupClass = "popup-research";
+                            } else if (feature.properties.state.includes("Wärme & Strom")) {
+                                popupClass = "popup-energy";
+                            } else if (feature.properties.state.includes("Wärme")) {
+                                popupClass = "popup-heat";
+                            } else if (feature.properties.state.includes("Strom")) {
+                                popupClass = "popup-electricity";
+                            }
+                            // Create a new popup with the generated content
+                            currentPopup = new maplibregl.Popup({ className: popupClass })
+                                .setLngLat(coordinates)
+                                .setHTML(popupContent)
+                                .addTo(map);
+                        });
+                    });
+
+                    // Change cursor to pointer when hovering over the layer
+                    map.on('mouseenter', layerID, () => {
+                        map.getCanvas().style.cursor = 'pointer';
+                    });
+
+                    // Reset cursor when leaving the layer
+                    map.on('mouseleave', layerID, () => {
+                        map.getCanvas().style.cursor = '';
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading places data:', error);
+            }
+        };
+
+
+        // Add zoom and rotation controls to the map.
         map.addControl(new maplibregl.NavigationControl({
             visualizePitch: false,
             visualizeRoll: false,
@@ -376,16 +374,18 @@ label.appendChild(countContainer);
 
 
 
-    map.dragRotate.disable();
-    map.touchZoomRotate.disableRotation();
+        map.dragRotate.disable();
+        map.touchZoomRotate.disableRotation();
 
-    // Toggle filters visibility on button click
-    toggleButton.addEventListener('click', () => {
-        const isVisible = filtersContent.style.display === 'none';
-        filtersContent.style.display = isVisible ? 'block' : 'none';
-        filtersSource.style.display = isVisible ? 'block' : 'none';
-        toggleButton.textContent = isVisible ? 'Filter Ausblenden' : 'Filter Anzeigen'; 
-    });
-</script>
+        // Toggle filters visibility on button click
+        toggleButton.addEventListener('click', () => {
+            const isVisible = filtersContent.style.display === 'none';
+            filtersContent.style.display = isVisible ? 'block' : 'none';
+            filtersSource.style.display = isVisible ? 'block' : 'none';
+           // Toggle the 'open' class to rotate the arrow
+    toggleButton.classList.toggle('open');
+        });
+    </script>
+</main>
 </body>
 </html>

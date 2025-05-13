@@ -1,0 +1,5885 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.954197353149135,
+                    49.84101897783786
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Groß-Umstadt–Heubach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,09 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "36,7 °C",
+                    "Teufe": "773 m",
+                    "Förderrate": "5 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.405109198641737,
+                    48.138511875824356
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "München-Freiham",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "13 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "91,9 °C",
+                    "Teufe": "2517,8 m",
+                    "Förderrate": "121 l/s",
+                    "Inbetriebnahme": 2016.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.637398900714602,
+                    49.42149575317556
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Kaiserslautern",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "52 °C",
+                    "Teufe": "1450 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2015.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.299821269358382,
+                    51.48659342746747
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Bochum Werne/Zeche Robert Müser",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,4 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "20 °C",
+                    "Teufe": "570 m",
+                    "Förderrate": "32 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.567386584802927,
+                    49.12572989419394
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Bruchsal",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,2 MW",
+                    "Pel": "0,5 MW",
+                    "Tmax": "131 °C",
+                    "Teufe": "2.542 m",
+                    "Förderrate": "31 l/s",
+                    "Inbetriebnahme": 2009.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.25284896542634,
+                    47.90513081785821
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Pfullendorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5,7 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "75 °C",
+                    "Teufe": "1.530 m",
+                    "Förderrate": "25 l/s",
+                    "Inbetriebnahme": 2020.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.641849987829817,
+                    49.53062084863661
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Weinheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,1 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "65 °C",
+                    "Teufe": "1.150 m",
+                    "Förderrate": "10 l/s",
+                    "Inbetriebnahme": 2005.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.734988698327786,
+                    48.170542327715914
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Aschheim, Feldkirchen, Kirchheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "12,4 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "87,1 °C",
+                    "Teufe": "2.529 m",
+                    "Förderrate": "84,7 l/s",
+                    "Inbetriebnahme": 2009.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.726130891461885,
+                    47.996250100846254
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Strom"
+                ],
+                "title": "Dürrnhaar",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "5,5 MW",
+                    "Tmax": "141 °C",
+                    "Teufe": "3.926 m",
+                    "Förderrate": "133 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.886350402690871,
+                    48.289792213335524
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Erding",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10,2 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "65 °C",
+                    "Teufe": "2.218 m",
+                    "Förderrate": "48 l/s",
+                    "Inbetriebnahme": 1998.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.571571887105844,
+                    48.11868935553278
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Garching a.d. Alz ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7 MW",
+                    "Pel": "5,2 MW",
+                    "Tmax": "125 °C",
+                    "Teufe": "3.837 m",
+                    "Förderrate": "125 l/s",
+                    "Inbetriebnahme": 2021.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.66291528907552,
+                    48.26126192560934
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Garching bei München",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "9,8 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "75 °C",
+                    "Teufe": "2226,3 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": 2011.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.719357321494547,
+                    47.88189030335666
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Holzkirchen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5 MW",
+                    "Pel": "3,6 MW",
+                    "Tmax": "157 °C",
+                    "Teufe": "5.078 m",
+                    "Förderrate": "65 l/s",
+                    "Inbetriebnahme": 2019.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.697420933442515,
+                    48.22970537486774
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Ismaning",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7,2 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "78 °C",
+                    "Teufe": "1.906 m",
+                    "Förderrate": "85 l/s",
+                    "Inbetriebnahme": 2013.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.687849845382795,
+                    48.02701510509703
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Kirchstockach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10 MW",
+                    "Pel": "5,5 MW",
+                    "Tmax": "125 °C",
+                    "Teufe": "3881,6 m",
+                    "Förderrate": "140,5 l/s",
+                    "Inbetriebnahme": 2013.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.645622608546594,
+                    48.09957536362663
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Kirchweidach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "30,6 MW",
+                    "Pel": "4,4 MW",
+                    "Tmax": "128 °C",
+                    "Teufe": "3.421 m",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": 2013.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.716111846935974,
+                    48.134697803069514
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "München-Riem",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "13 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "98,4 °C",
+                    "Teufe": "2.747 m",
+                    "Förderrate": "87 l/s",
+                    "Inbetriebnahme": 2004.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.557664351044714,
+                    48.116300282237844
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "München-Sendling",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "50 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "107 °C",
+                    "Teufe": "2809,18 m",
+                    "Förderrate": "115 l/s",
+                    "Inbetriebnahme": 2021.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.562880508759404,
+                    48.01998864023229
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Oberhaching-Laufzorn/Grünwald",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "40 MW",
+                    "Pel": "4,3 MW",
+                    "Tmax": "135 °C",
+                    "Teufe": "3755,2 m",
+                    "Förderrate": "132 l/s",
+                    "Inbetriebnahme": 2011.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.791471691465471,
+                    48.16723139267549
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Poing",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "11,5 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "85 °C",
+                    "Teufe": "3.014 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.525744806831463,
+                    48.067708753419325
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Pullach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "16 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "108 °C",
+                    "Teufe": "3.443 m",
+                    "Förderrate": "87 l/s",
+                    "Inbetriebnahme": 2005.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.668797058077113,
+                    47.97278162324089
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Sauerlach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "4 MW",
+                    "Pel": "5 MW",
+                    "Tmax": "141 °C",
+                    "Teufe": "4.480 m",
+                    "Förderrate": "120 l/s",
+                    "Inbetriebnahme": 2013.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.010321196103183,
+                    48.257066211392576
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Simbach-Braunau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "9,4 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "81,7 °C",
+                    "Teufe": "1.942 m",
+                    "Förderrate": "90 l/s",
+                    "Inbetriebnahme": 2000.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.555202373991184,
+                    48.875263721244984
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Straubing",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "2,1 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "36,5 °C",
+                    "Teufe": "824,8 m",
+                    "Förderrate": "31,4 l/s",
+                    "Inbetriebnahme": 1999.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.620680194130214,
+                    48.02347753735028
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Taufkirchen/Oberhaching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "40 MW",
+                    "Pel": "0 MW",
+                    "Tmax": "136 °C",
+                    "Teufe": "3.696 m",
+                    "Förderrate": "120 l/s",
+                    "Inbetriebnahme": 2015.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.579492009460596,
+                    47.973032611148284
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Traunreut",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "13,5 MW",
+                    "Pel": "5,5 MW",
+                    "Tmax": "120 °C",
+                    "Teufe": "4645,8 m",
+                    "Förderrate": "168,2 l/s",
+                    "Inbetriebnahme": 2014.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.65806130750904,
+                    48.1933864433896
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Unterföhring",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "10 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "87 °C",
+                    "Teufe": "2.124 m",
+                    "Förderrate": "75 l/s",
+                    "Inbetriebnahme": 2009.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.65830471015045,
+                    48.19419030042086
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Unterföhring II",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "11,3 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "93 °C",
+                    "Teufe": "2.341 m",
+                    "Förderrate": "90 l/s",
+                    "Inbetriebnahme": 2014.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.597498830573379,
+                    48.05707719867894
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Unterhaching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "38 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "126 °C",
+                    "Teufe": "3.390 m",
+                    "Förderrate": "140 l/s",
+                    "Inbetriebnahme": 2007.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.580536621795996,
+                    48.27229792099072
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Unterschleißheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "7 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "80 °C",
+                    "Teufe": "1.960 m",
+                    "Förderrate": "100 l/s",
+                    "Inbetriebnahme": 2003.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.420294318053308,
+                    48.20130287457706
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Waldkraiburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "14 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "111,5 °C",
+                    "Teufe": "2.718 m",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.3748185,
+                    52.5186333
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Aquiferspeicher"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Berlin (Reichstag)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "70 °C",
+                    "Teufe": "300 m",
+                    "Förderrate": "27,8 l/s",
+                    "Inbetriebnahme": 1999.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.830142096367828,
+                    52.92971670587752
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Neuruppin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,4 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "63,4 °C",
+                    "Teufe": "1.702 m",
+                    "Förderrate": "3,9 l/s",
+                    "Inbetriebnahme": 2007.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.235606820955386,
+                    53.549095553624845
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie / Aquiferspeicher"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Neubrandenburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "80 °C",
+                    "Teufe": "1.268 m",
+                    "Förderrate": "28 l/s",
+                    "Inbetriebnahme": 1987.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.58624277017484,
+                    53.370086444791845
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Neustadt Glewe",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "4 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "99 °C",
+                    "Teufe": "2.450 m",
+                    "Förderrate": "35 l/s",
+                    "Inbetriebnahme": 1994.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.378065334267013,
+                    53.61160506954665
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Schwerin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5,7 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "56 °C",
+                    "Teufe": "1.311 m",
+                    "Förderrate": "41,6 l/s",
+                    "Inbetriebnahme": 2023.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.706866064335136,
+                    53.50846808868685
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Waren",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "1,3 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "63 °C",
+                    "Teufe": "1.565 m",
+                    "Förderrate": "17 l/s",
+                    "Inbetriebnahme": 1984.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.003896188222733,
+                    51.431306202705876
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Arnsberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,35 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "90 °C",
+                    "Teufe": "2.835 m",
+                    "Förderrate": "20 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.016736,
+                    51.461315
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Essen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,8 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "35 °C",
+                    "Teufe": "1200 m",
+                    "Förderrate": "bis 300 l/s",
+                    "Inbetriebnahme": 2010.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.131589,
+                    51.665782
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": [
+                    "Wärme"
+                ],
+                "title": "Marl",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "0,06 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "21 °C",
+                    "Teufe": "700 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2010.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.153275626628721,
+                    49.15363259926349
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Strom"
+                ],
+                "title": "Insheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "4,8 MW",
+                    "Tmax": "165 °C",
+                    "Teufe": "3.600 m",
+                    "Förderrate": "80 l/s",
+                    "Inbetriebnahme": 2012.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.121074550156372,
+                    49.18380273312805
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": [
+                    "Wärme & Strom"
+                ],
+                "title": "Landau ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "5 MW",
+                    "Pel": "1,8 MW",
+                    "Tmax": "159 °C",
+                    "Teufe": "3.291 m",
+                    "Förderrate": "70 l/s",
+                    "Inbetriebnahme": 2007.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.297889113612327,
+                    50.82706913379027
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Aachen-Weisweiler",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "150 °C",
+                    "Teufe": "5000 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.60113695637902,
+                    48.21203974640237
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Tüßling",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.480947708966209,
+                    48.21324297540055
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "München Allach ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.645248863893956,
+                    48.084932918448494
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Kirchweidach II ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.553430596269715,
+                    48.01460519793755
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Laufzorn II",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.636773335568694,
+                    48.11672914961414
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Neuperlach (Michaelibad)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.536367033083359,
+                    51.34139015556271
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Krefeld",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.49329,
+                    49.16376
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Graben-Neudorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2024.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.434471292527942,
+                    47.8710290510463
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Geschlossenes tiefengeothermisches System"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Geretsried",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "64 MW",
+                    "Pel": "8,2 MW",
+                    "Tmax": "155,3 °C",
+                    "Teufe": "4.736 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.526191,
+                    52.425768
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Aquiferspeicher"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Reallabor Geospeicher Berlin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "ca. 90  °C",
+                    "Teufe": "360 - 390 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.825719474771933,
+                    52.95453749288014
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Neuruppin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.076484,
+                    52.384704
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Potsdam",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.018523508436584,
+                    53.49980094145574
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Hamburg-Wilhelmsburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.648628854564983,
+                    49.87154589534785
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Erdwärmesondenspeicher\n/ Forschung"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Darmstadt",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.67630782564379,
+                    50.10978686925627
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Frankfurt am Main",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.269939,
+                    51.46819
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": "B_Projekt in Bau",
+                "title": "Bochum (Stadtwerke)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.570897778594139,
+                    48.123769490231034
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte",
+                "title": "Seismik Giga-M",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.373306303211436,
+                    48.50699119661484
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Petrothermale Geothermie"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Bad Urach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.654513269806042,
+                    47.88280454097704
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Mauerstetten",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "130 °C",
+                    "Teufe": "4.080 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.601612176917618,
+                    52.90381696285989
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Groß Schönebeck",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "1 MW",
+                    "Tmax": "150 °C",
+                    "Teufe": "4.309 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2011.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.826339230222407,
+                    52.40538249243043
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Hannover",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "2 MW",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "169 °C",
+                    "Teufe": "3.820 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.328054251558454,
+                    52.90333311324816
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Horstberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "159 °C",
+                    "Teufe": "3.920 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.1624,
+                    50.871812
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Alsdorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "26 °C",
+                    "Teufe": "900 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2018.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.496606,
+                    50.716949
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": "C_Forschungsprojekte ",
+                "title": "Zwickau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "26 °C",
+                    "Teufe": "628 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2018.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.16721654909178,
+                    49.45981824086134
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bad Dürkheim \"Flaggenturm\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.265765833813434,
+                    49.351968319295814
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Haßloch \"Taro\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.324635686424948,
+                    50.828488845357484
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Aachen-Weisweiler",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.28406165249926,
+                    52.61074585425046
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ahnsbeck",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.113514579163345,
+                    52.595044971923706
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Celle",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.893252782854162,
+                    52.42738273502441
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Altwarmbüchen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.695822969070726,
+                    52.863515866374144
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bad Fallingbostel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.504699625922768,
+                    52.7050274067317
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Barnstorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.18581568894619,
+                    52.31746797270104
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bentheimer Wald",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.261449586874713,
+                    49.05032719932745
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Wörth \"Bertha\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.210586214781236,
+                    49.07772350346744
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kandel \"Bienwald\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.674800512868208,
+                    52.49530012213466
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bissendorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.663389159218392,
+                    53.58177902984293
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Borkum",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.523076226129794,
+                    52.267331549145354
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Braunschweig ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.828652,
+                    52.405053
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Geschlossenes tiefengeothermisches System"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Hannover \"Buchholz\" ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.897148634542758,
+                    52.50074386912639
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Burgwedel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.251203009341912,
+                    49.019931910804154
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Hagenbach \"Catharina Werde\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.768430344532964,
+                    51.43712636153094
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Duisburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.782666,
+                    51.237132
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Düsseldorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.415054268737949,
+                    49.74262266789378
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Eich-Hamm",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.548829,
+                    51.443674
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Neukirchen-Vluyn \"ENNI Geothermie\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.855186,
+                    51.504352
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Oberhausen \"evo Geotherm\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.598757900805719,
+                    52.42702492320163
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Garbsen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.269659,
+                    51.435852
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Gelderland-Süd",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.17983,
+                    50.766245
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Aachen ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.0851,
+                    50.7771
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Geothermie-Aachen\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987586968799993,
+                    51.55281238856508
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Forschung"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Göttingen ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.396897251256947,
+                    49.27457481089342
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Harthausen \"Grumbeere\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.626996,
+                    51.958718
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Münster",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2030.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.870245335646182,
+                    47.93596493834527
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Taching am See",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.197270018268414,
+                    47.86731651868918
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Weilheim \"Hardtwiese\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.850545500093414,
+                    52.9835928966011
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Weyhe",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.627616524963441,
+                    52.30445820247897
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Hemmingen-Gehrden",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.31869745992935,
+                    52.92726525447614
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Horstberg (neu)\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.056564,
+                    54.48522
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Husum",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.581926,
+                    53.072732
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bad Bevensen \"Ilmenau I\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.052848794431371,
+                    49.977761256394565
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ingelheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.547702641322267,
+                    49.67228189268898
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Einhausen \"Jägersburg\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.739785525325175,
+                    54.05274766182214
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Wolgast „Jarovit“ ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.474543,
+                    51.41349
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Hagen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "130-160 °C",
+                    "Teufe": "3200-4100 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.170346039287459,
+                    49.2176432640233
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bornheim \"Kaltenbach\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.836526094701407,
+                    49.46904151573768
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kaiserslautern \"Kasimir\" ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.417565,
+                    51.383222
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kempen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.143283953759203,
+                    49.349464091776255
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Maikammer \"Kerner\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.127725454194394,
+                    54.32248266564758
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kiel und Umgebung",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.755866001933198,
+                    52.40693785441795
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Langenhagen \"Kleefeld I\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.17046,
+                    50.804479
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Aachen  \"Kreuz Aachen\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.848257023391437,
+                    52.334263224509925
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kronsberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.822471566518908,
+                    48.18840515534486
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Graben \"Lechfeld\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.325350451168644,
+                    52.52272023150037
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Lingen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.344264851846878,
+                    49.24500495939631
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Germersheim \"Lingenfeld\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.031623329032591,
+                    49.17889321143759
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Siebeldingen \"Löwenherz\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.435699257741696,
+                    49.48604491065088
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ludwigshafen 1\"Ludwig\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.416274214800374,
+                    53.24731862028142
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Lüneburg ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.577750890676072,
+                    49.41537759355145
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Kaiserslautern \"Lutrina\" ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.251454563423273,
+                    49.992734509276595
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Mainz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.947355948641481,
+                    50.777931269409656
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Herdorf \"Margarete\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.863902,
+                    51.444271
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Mühlheim an der Ruhr",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.233994,
+                    53.16857
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Oldenburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.089694660701054,
+                    52.98640066846064
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Munster-Bispingen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "5.000 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": 2025.0
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.984286,
+                    54.072649
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Neumünster",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.000913,
+                    53.699152
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Norderstedt",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.51335,
+                    51.906197
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Nordharz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.237632044882254,
+                    52.42547546395112
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Nordhorn",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.603099,
+                    51.546206
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Rheinberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.961632,
+                    50.939052
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Köln",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.374346189346241,
+                    49.382200214589126
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Schifferstadt \"Rhein-Pfalz\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.112103680020146,
+                    49.09783528692474
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Steinfeld \"Rift\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.878585600773969,
+                    47.912024472171346
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Rupertiwinkel \"Ruperti II\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.842887028159513,
+                    52.98257382299324
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Soltau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.229263478450259,
+                    49.20860956135903
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hyrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Rülzheim \"Storchenaue\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.311011774180463,
+                    49.49763154141702
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ludwigshafen 2\"Therese\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.563586958275387,
+                    52.96741962692176
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Uelzen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.252429734455514,
+                    47.996346085738814
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Seefeld \"Vierseen\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.911824124756217,
+                    54.072248106892204
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Zinnowitz „Vineta“",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.786121116346246,
+                    52.4230936673154
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Wolfsburger Revier",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.348018093309307,
+                    49.63395024457772
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Worms-Silbersee",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.131261932324158,
+                    51.273684138961215
+                ]
+            },
+            "properties": {
+                "use": [],
+                "state": "D_Projekt in Planung",
+                "title": "Wuppertal",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.273505,
+                    51.446259
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bochum (Fraunhofer IEG)",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.05212018433147,
+                    48.039263487567226
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ammersee-West",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.411744093083335,
+                    48.25346600816881
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Ampfing",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.349488070534996,
+                    48.19706201887078
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Aschau am Inn",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.542819913849803,
+                    50.73917722406988
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Auerbach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.913673657882406,
+                    48.38042009013776
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Augsburg-Ost",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.58949,
+                    52.67851
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Bernau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.560200296781957,
+                    48.18308464137711
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "München-Milbertshofen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.74761,
+                    52.03946
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Brand",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.50022354426577,
+                    52.624825882549935
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Campus Berlin-Buch",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.721016271812298,
+                    48.17791128436578
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Gendorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.433373901407554,
+                    48.26331321255316
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Dachau-Nord",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.544151322026869,
+                    47.95717338865071
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Dingharting-Attenham",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.736253,
+                    51.054231
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Dresden-Heidenau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.543934147309393,
+                    48.11642109736139
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Engelsberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.846030592357547,
+                    47.90901101943569
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Feldkirchen-Westerham",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.118964336760932,
+                    47.85647862615721
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Rosenheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.77319777951548,
+                    48.105324942679125
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Vaterstetten",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.029143,
+                    50.983025
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Petrothermale Geothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Erfurt",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.478003,
+                    49.171949
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Dettenheim \"Erlich\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.608300585147825,
+                    48.18949187280258
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "München-Freimann",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.248235202703608,
+                    48.173358975378385
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Fürstenfeldbruck-Nord",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.32290084955661,
+                    48.05750893477704
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Gauting West",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.404441390074705,
+                    48.06592530031783
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Gauting Ost",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.343633939237618,
+                    48.22784945192916
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Geiselbullach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.742229196565955,
+                    48.40164310981577
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Freising",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.804962184230536,
+                    48.09499347012828
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Biberach a.d.Riß.",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.63827194609091,
+                    48.00047371415766
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Palling",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.642169490830092,
+                    47.94933767298183
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Traunreut/Waging am See ",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.525781402961185,
+                    53.47578850246684
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Göhren-Lebbin",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.733434575164654,
+                    51.053416167061314
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Dresden",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.666007800189224,
+                    48.20820384266516
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Graming",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.585578,
+                    49.403157
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Schwetzingen \"Hardt\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.423352,
+                    52.741877
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Altmark Salzwedel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.755696250173637,
+                    48.84745290090928
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Pforzheim »Käfersteige«",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.154660541415963,
+                    53.962024716636996
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Kaiserbäder Usedom\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.5435,
+                    49.13612
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Karlsdorf",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.473234178130769,
+                    48.22858836437431
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Karlsfeld-Nord",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.820448786061359,
+                    54.115763163517606
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Karlshagen-Usedom\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.407983459828367,
+                    49.00756367570188
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Karlsruhe-Süd II\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.431781797071968,
+                    49.09850756202273
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Eggenstein-Leopoldshafen \"KIT Campus Nord II\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.877576433800958,
+                    48.33839899752713
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Lahr",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.471756006871416,
+                    49.60101729555329
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Lampertheim I\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.49202248367049,
+                    49.60205500948561
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Lampertheim II\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.673259143632073,
+                    47.61564095130721
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Lörrach",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.596442092659883,
+                    50.03875103357532
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Frankfurt am Main \"Luftbrücke\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.481046,
+                    49.48758
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Mannheim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.682766904349727,
+                    52.57098171977273
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Stendal",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.579550936768982,
+                    52.871150680347604
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Osterburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.532967481480256,
+                    48.20778204433672
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "München-Feldmoching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.64448783339483,
+                    48.30964562153244
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Neufahrn-Eching",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.071229468035005,
+                    49.45249505311012
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Nürnberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.23715413295646,
+                    52.75528270173587
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Oranienburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.028673292631577,
+                    48.62875171586698
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Achern \"Ortenau II\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "100 °C",
+                    "Teufe": "3.000 m",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.830829136586528,
+                    53.42494055759068
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Parchim",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.428460085810334,
+                    48.11577060827251
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Gräfelfing/Planegg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.3567498,
+                    52.5282904
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Premnitz",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.861421,
+                    53.3214811
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Prenzlau",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.517268338254889,
+                    48.05555953496567
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Pullach Süd",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.60853313961705,
+                    47.783219630139214
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "\"Raum Ravensburg\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.468468523009529,
+                    49.84161479691538
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Riedstadt",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.180667007830856,
+                    48.80920147956789
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Rastatt \"Römerbad\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.299247,
+                    51.473801
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Grubenwasser"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Sangerhausen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.930138,
+                    52.31122
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Schwielowsee",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.661070213915194,
+                    50.49695326710284
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Petrothermale Geothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Schneeberg \"Silberberg\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.008997755766739,
+                    48.383146854415905
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Geschlossenes tiefengeothermisches System"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Neu-Ulm",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.035525256557323,
+                    54.31021272312311
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Sonde"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Stralsund",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.845158777389785,
+                    47.99960018294129
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Freiburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.637406558652517,
+                    47.86739322251717
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Traunstein",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.554836688874541,
+                    48.02656614542359
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Trostberg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.169992285516651,
+                    50.42648230429329
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Vogtlandkreis",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.510063,
+                    49.245006
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Philippsburg \"Waghäusel\"",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.740053509445298,
+                    49.59775628202355
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Waldnerturm",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.714686125247729,
+                    48.12967611012164
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Waldweihnacht",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.625109547929297,
+                    49.51303157802101
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Weinheim-Süd",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.42485522227732,
+                    47.91022277007403
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Wolfratshausen",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.950922585389575,
+                    49.79045753836998
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Würzburg",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.449804882363829,
+                    52.4739852509537
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Berlin Neukölln",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.282239264382142,
+                    52.585362303987914
+                ]
+            },
+            "properties": {
+                "use": [
+                    "Hydrogeothermie"
+                ],
+                "state": "D_Projekt in Planung",
+                "title": "Berlin Tegel",
+                "attributes": [],
+                "details": {
+                    "Ptherm": "kein Eintrag",
+                    "Pel": "kein Eintrag",
+                    "Tmax": "kein Eintrag",
+                    "Teufe": "kein Eintrag",
+                    "Förderrate": "kein Eintrag",
+                    "Inbetriebnahme": "kein Eintrag"
+                }
+            }
+        }
+    ]
+}
