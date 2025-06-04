@@ -4093,7 +4093,7 @@
                 "use": [
                     "Forschung"
                 ],
-                "state": "C_Forschungsprojekte",
+                "state": "C_Forschungsprojekte ",
                 "title": "Seismik Giga-M",
                 "attributes": [],
                 "details": {
