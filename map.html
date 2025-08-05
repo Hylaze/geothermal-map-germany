@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h2>Tiefe Geothermie in Deutschland <span class="überschrift-stand">(Stand Januar 2025)</span></h2>
+    <h2>Tiefe Geothermie in Deutschland <span class="überschrift-stand">(Stand Mai 2025)</span></h2>
     <main>
     <div id="map">
 
@@ -23,12 +23,10 @@
             <div id="filter-source" style="padding:10px;">
                 <hr>
                 <span class="Umbruch" >Datengrundlage:</span>
-                <span>Bundesverband Geothermie e.V., Bergbauämter, Geologische Dienste sowie Staatsministerien der
+                <span  class="Umbruch" >Bundesverband Geothermie e.V., Bergbauämter, Geologische Dienste sowie Staatsministerien der
                     Bundesländer und www.geotis.de</span>
-            </div>
-           
+            </div>  
         </nav>
-
 
     </div>
     <!-- Slideshow container -->
@@ -56,22 +54,28 @@
             'planung': '#4ba83b',
             'forschung': '#95338a'
         };
+            const iconPaths = {
+            "Hydrogeothermie / Aquiferspeicher":  './icons/TG-Poster-Icon-Hydrogeothermie-weiss.png',
+            "Erdwärmesondenspeicher\n/ Forschung": './icons/TG-Poster-Icon-Forschung-weiss.png',
+            'Hydrogeothermie': './icons/TG-Poster-Icon-Hydrogeothermie-weiss.png',
+            'Petrothermale Geothermie':'./icons/TG-Poster-Icon-Petronal-weiss.png',
+            'Forschung': './icons/TG-Poster-Icon-Forschung-weiss.png',
+            "Aquiferspeicher": './icons/TG-Poster-Icon-Aquifer-weiss.png',
+            'Grubenwasser': './icons/TG-Poster-Icon-Grubenwasser-weiss.png',
+            'Sonde': './icons/TG-Poster-Icon-Sonde-weiss.png',
+            'Geschlossenes tiefengeothermisches System': './icons/TG-Poster-Icon-TG-weiss.png'
+        };
+
 
         const checkboxLabelMap = {
             'wärme_strom': 'kombinierte Wärme- und Stromerzeugung',
             'wärme': 'nur Wärmebereitstellung',
             'strom': 'nur Stromerzeugung',
             'bau': 'Anlagen in Bau',
-            'planung': 'Anlagen in Planung',
+            'planung': 'Anlagen in Planung \n (Aufsuchungserlaubnisse)',
             'forschung': 'Forschungsanlagen',
         };
-        const useCaseSymbolMap = {
-            'Hydrogeothermie': 'hydrogeothermie.csv',
-            'Grubenwasser': 'grubenwasser.csv',
-            'Sonde': 'sonde.csv',
-            'Forschung': 'forschung.csv',
-            'Geschlossenes tiefengeothermisches System': 'gt_system.csv'
-        }
+       
         let counts = {
             'wärme': 0,
             'wärme_strom': 0,
@@ -159,14 +163,18 @@
         const operationCategories = ['wärme', 'strom', 'wärme_strom'];
         const planningCategories = ['planung', 'bau', 'forschung'];
 
-        map.on('load', () => {
+       
+
+
+        map.on('load',async  () => {
             startSlideshow();
-            loadPlaces().then(updateWärmeCount);
+            loadPlaces()
+            
         });
-        
+       
         const loadPlaces = async () => {
             try {
-                const response = await fetch('anlagen_neu_4.json');
+                const response = await fetch('anlagen2.json');
                 const places = await response.json();
                 console.log(places.features);
                 places.features.forEach(feature => {
@@ -181,7 +189,7 @@
                     } else if (useTypes.includes("Strom")) {
                         feature.properties.icon = "strom";
                         counts['strom'] += 1;
-                    } else if (useTypes.includes("C_Forschungsprojekte ")) {
+                    } else if (useTypes.includes("C_Forschungsprojekte")) {
                         feature.properties.icon = "forschung";
                         counts['forschung'] += 1;
                     } else if (useTypes.includes("B_Projekt in Bau")) {
@@ -196,27 +204,27 @@
                     type: 'geojson',
                     data: places
                 });
-
-                Object.keys(iconColorMap).forEach((symbol) => {
-                    const layerID = `poi-${symbol}`;
-
-                    map.addLayer({
-                        'id': layerID,
-                        'type': 'circle',
-                        'source': 'places',
-                        'paint': {
-                            'circle-color': iconColorMap[symbol],
-                            'circle-radius': [
-                                'interpolate',
-                                ['linear'],
-                                ['zoom'],
-                                5, 4,
-                                10, 12
-                            ],
-                            'circle-opacity': 0.85
-                        },
-                        'filter': ['==', ['get', 'icon'], symbol]
-                    });
+                 Object.keys(iconColorMap).forEach((symbol) => {
+                        const layerID = `poi-${symbol}`;
+                        map.addLayer({
+                            'id': layerID,
+                            'type': 'circle',
+                            'source': 'places',
+                            'paint': {
+                                'circle-color': iconColorMap[symbol],
+                                'circle-radius': [
+                                    'interpolate',
+                                    ['linear'],
+                                    ['zoom'],
+                                    5, 4,
+                                    12, 24
+                                ],
+                                'circle-opacity': 0.85
+                            },
+                            'filter': ['==', ['get', 'icon'], symbol]
+                        });
+               
+               
 
                     const input = document.createElement('input');
                     input.type = 'checkbox';
@@ -262,6 +270,7 @@
                     });
 
                 });
+               
                 // Append filters to the menu
                 filtersContent.appendChild(filtersInOperation);
                 filtersContent.appendChild(filtersPlanned);
@@ -280,13 +289,14 @@
                             const title = feature.properties.title;
                             const details = JSON.parse(feature.properties.details);
                             const markerColor = iconColorMap[feature.properties.icon] || '#ffffff';
-
+                            const iconUrl = iconPaths[feature.properties.use] || ''; 
                             // Construct popup content
-                            let popupContent = `
-                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
-                        <strong>${title}</strong>
-                    </div>
-                `;
+                              popupContent = `
+                                <div style="background-color: ${markerColor}; color: white; padding: 10px; border-radius: 3px; height: 14px; display: flex; justify-content: center; align-items: center; text-align: center; padding-right: 30px; white-space: nowrap;">
+                                    <strong style="margin: 0 8px 0 0; white-space: nowrap;">${title}</strong>
+                                    <img src="${iconUrl}" alt="Icon" title="${feature.properties.use}" style="height: 20px;">
+                                </div>
+                            `;
 
                             if (feature.properties.state !== "D_Projekt in Planung") {
                                 const detailKeys = ['Ptherm', 'Pel', 'Tmax', 'Teufe', 'Förderrate', 'Inbetriebnahme', 'Link zum Lexikon'];
@@ -314,11 +324,12 @@
                                 popupContent += `</ul>`;
                                 if (allDetailsEmpty) {
                                     popupContent = `
-                    <div style="background-color: ${markerColor}; color: white; padding: 5px; padding-right: 30px; padding-left: 10px; border-radius: 3px;">
-                        <strong>${title}</strong>
-                    </div>
-                `;
-                                }
+                                        <div style="background-color: ${markerColor}; color: white; padding: 10px; border-radius: 3px; height: 14px; display: flex; justify-content: center; align-items: center; text-align: center; padding-right: 30px; white-space: nowrap;">
+                                            <strong style="margin: 0 8px 0 0; white-space: nowrap;">${title}</strong>
+                                            <img src="${iconUrl}" alt="Icon" title="${feature.properties.use}" style="height: 20px;">
+                                        </div>
+                                    `;
+                                    }
                             }
 
                             // Close the previously opened popup if there is one
